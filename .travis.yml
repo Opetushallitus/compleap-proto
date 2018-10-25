@@ -8,10 +8,10 @@ env:
 
 install:
   - pip install --user awscli
-  - echo "npm install here"
+  - npm install
 
 script:
-  - echo "webpack here"
+  - vue-cli-service build
 
 deploy:
   provider: script
