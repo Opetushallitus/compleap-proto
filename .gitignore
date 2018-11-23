@@ -1,7 +1,7 @@
 # Paths #
 #####################
-/node_modules
-/dist
+dist/
+node_modules/
 
 # OS generated files #
 ######################
