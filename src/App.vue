@@ -29,4 +29,14 @@
   max-width: 1004px;
   margin: 0 auto;
 }
+
+.fade-enter-active, .fade-leave-active {
+  transition: all 1s;
+  min-height: 100vh;
+  opacity: 1;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+  min-height: 0vh;
+}
 </style>
