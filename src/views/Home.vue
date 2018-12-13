@@ -9,30 +9,33 @@
           <span class="font-weight-light">Find</span><br>
           <span class="font-weight-bold"> your path!</span>
         </h1>
-        <button type="button" class="mt-5 px-5 btn-lg btn-warning" style="padding-top: .7em;">Start educational journey</button>
+        <button type="button" class="mt-5 px-5 btn-lg btn-warning font-weight-bold" style="padding-top: .7em;">
+          Start educational journey
+          <img class="pl-3" src="../assets/images/plane.svg" />
+        </button>
       </div>
     </div>
-    <div class="content d-flex flex-column align-items-center">
+    <div class="content mt-7 d-flex flex-column align-items-center">
       <h2 class="pb-7">
         <span class="font-weight-light">What’s in it for me?</span>
       </h2>
       <div class="d-flex flex-row">
-        <div class="d-flex flex-column align-items-center p-3">
+        <div class="d-flex flex-column align-items-center p-3 text-center">
           <img class="pb-5" src="../assets/images/id-card.svg" />
           <h5>Create competence profile</h5>
           <p>At as in understood an remarkably solicitude. Mean them very seen she she. Use totally written the observe pressed justice.</p>
           <a href="/readmore">Read more</a>
         </div>
-        <div class="d-flex flex-column align-items-center p-3">
+        <div class="d-flex flex-column align-items-center p-3 text-center">
           <img class="pb-5" src="../assets/images/hat.svg" />
           <h5>Compare educational options</h5>
           <p>At as in understood an remarkably solicitude. Mean them very seen she she. Use totally written the observe pressed justice.</p>
           <a href="/readmore">Read more</a>
         </div>
-        <div class="d-flex flex-column align-items-center p-3">
+        <div class="d-flex flex-column align-items-center p-3 text-center">
           <img class="pb-5" src="../assets/images/path.svg" />
           <h5>Explore educational map</h5>
-          <p>At as in understood an remarkably solicitude. Mean them very seen she she. Use totally written the observe pressed justice.</p>
+          <p class="text-nter">At as in understood an remarkably solicitude. Mean them very seen she she. Use totally written the observe pressed justice.</p>
           <a href="/readmore">Read more</a>
         </div>
       </div>
@@ -56,7 +59,7 @@ export default {
 @import '../style/bootstrap-custom/custom.scss';
 
 .header {
-  height: 640px;
+  height: 610px;
   overflow: visible;
   position: relative;
 }
