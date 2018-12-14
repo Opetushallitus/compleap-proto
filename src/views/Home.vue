@@ -9,7 +9,7 @@
           <span class="font-weight-light">Find</span><br>
           <span class="font-weight-bold"> your path!</span>
         </h1>
-        <button type="button" class="mt-5 px-5 btn-lg btn-warning font-weight-bold" style="padding-top: .7em;">
+        <button type="button" @click="openModal('login')" class="mt-5 px-5 btn-lg btn-warning font-weight-bold" style="padding-top: .7em;">
           Start educational journey
           <img class="pl-3" src="../assets/images/plane.svg" />
         </button>
@@ -40,17 +40,73 @@
         </div>
       </div>
     </div>
+    <modal v-if="modal.activeModal==='login'" @close="closeModal()" :headerBorder="false" :bgSplit="true">
+      <div slot="header">
+        <img src="../assets/images/auth.svg" />
+      </div>
+      <div slot="body" v-if="modal.modalView==='loading'">
+        <div class="d-flex flex-column mt-5 align-items-center">
+          <div class="circle-loader">
+            <div class="checkmark draw"></div>
+          </div>
+        </div>
+      </div>
+      <div slot="body" v-if="modal.modalView==='success'">
+        <div class="d-flex flex-column mt-5 align-items-center">
+          <div class="circle-loader load-complete">
+            <div class="checkmark done draw"></div>
+          </div>
+          <h4>Kiitos arvostelusta!</h4>
+        </div>
+      </div>
+      <div slot="body" v-if="modal.modalView==='login'">
+        <p class="lead"></p>
+        <div class="rating-container d-flex justify-content-center">
+          <div class="w-50 pr-7">
+            <h5 class="text-right">Login using bank credentials</h5>
+            <p>Gives access to your educational profile and more accurate results.</p>
+            <button type="button" class="btn btn-warning font-weight-bold">Login</button>
+          </div>
+          <div class="w-50 pl-7">
+            <h2>Continue unidentified</h2>
+            <p>Your profile can be edited but not saved until you login.</p>
+            <button type="button" class="btn btn-secondary font-weight-bold">Continue</button>
+          </div>
+        </div>
+      </div>
+      <div slot="footer">
+        <button v-if="modal.modalView==='form'" v-on:click="sendReview()" type="button" class="btn btn-primary btn-lg">Lähetä arvostelu</button>
+        <button v-if="modal.modalView==='success'" v-on:click="closeModal()" type="button" class="btn btn-primary btn-lg">Sulje</button>
+      </div>
+    </modal>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import modal from '@/components/modal.vue'
 
 export default {
   name: 'home',
   components: {
-    HelloWorld
+    'modal': modal
+  },
+  data () {
+    return {
+      modal: {
+        activeModal: '', // login
+        modalView: 'login'
+      }
+    }
+  },
+  methods: {
+    openModal (id) {
+      this.modal.modalView = 'login'
+      this.modal.activeModal = id
+    },
+    closeModal () {
+      this.modal.activeModal = ''
+    }
   }
 }
 </script>
@@ -81,4 +137,5 @@ h3 {
 button {
   text-transform: uppercase;
 }
+
 </style>
