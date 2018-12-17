@@ -9,7 +9,7 @@
           <span class="font-weight-light">Find</span><br>
           <span class="font-weight-bold"> your path!</span>
         </h1>
-        <button type="button" @click="openModal('login')" class="mt-5 px-5 btn-lg btn-warning font-weight-bold" style="padding-top: .7em;">
+        <button type="button" @click="openModal('login')" class="mt-5 px-5 btn-lg btn-warning font-weight-bold">
           Start educational journey
           <img class="pl-3" src="../assets/images/plane.svg" />
         </button>
@@ -51,32 +51,23 @@
           </div>
         </div>
       </div>
-      <div slot="body" v-if="modal.modalView==='success'">
-        <div class="d-flex flex-column mt-5 align-items-center">
-          <div class="circle-loader load-complete">
-            <div class="checkmark done draw"></div>
-          </div>
-          <h4>Kiitos arvostelusta!</h4>
-        </div>
-      </div>
       <div slot="body" v-if="modal.modalView==='login'">
         <p class="lead"></p>
-        <div class="rating-container d-flex justify-content-center">
-          <div class="w-50 pr-7">
-            <h5 class="text-right">Login using bank credentials</h5>
+        <div class="rating-container d-flex">
+          <div class="w-50 pr-7 d-flex flex-column justify-content-between">
+            <h5>Login using bank credentials</h5>
             <p>Gives access to your educational profile and more accurate results.</p>
-            <button type="button" class="btn btn-warning font-weight-bold">Login</button>
+            <router-link to="/authenticate" tag="button" class="py-3 w-100 btn btn-warning font-weight-bold">Login</router-link>
           </div>
-          <div class="w-50 pl-7">
+          <div class="w-50 pl-7 d-flex flex-column justify-content-between">
             <h2>Continue unidentified</h2>
             <p>Your profile can be edited but not saved until you login.</p>
-            <button type="button" class="btn btn-secondary font-weight-bold">Continue</button>
+            <button type="button" class="py-3 w-100 btn btn-secondary font-weight-bold">Continue</button>
           </div>
         </div>
       </div>
       <div slot="footer">
-        <button v-if="modal.modalView==='form'" v-on:click="sendReview()" type="button" class="btn btn-primary btn-lg">Lähetä arvostelu</button>
-        <button v-if="modal.modalView==='success'" v-on:click="closeModal()" type="button" class="btn btn-primary btn-lg">Sulje</button>
+        &nbsp;
       </div>
     </modal>
   </div>

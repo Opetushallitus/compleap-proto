@@ -1,10 +1,51 @@
 /* Compleap Prototype typography */
 
+@font-face {
+  font-family: 'urw_din';
+  src: url('./assets/fonts/urw_-_urwdin-bold-webfont.woff2') format('woff2'),
+       url('./assets/fonts/urw_-_urwdin-bold-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'urw_din';
+  src: url('./assets/fonts/urw_-_urwdin-bolditalic-webfont.woff2') format('woff2'),
+       url('./assets/fonts/urw_-_urwdin-bolditalic-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'urw_din';
+  src: url('./assets/fonts/urw_-_urwdin-italic-webfont.woff2') format('woff2'),
+       url('./assets/fonts/urw_-_urwdin-italic-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'urw_din';
+  src: url('./assets/fonts/urw_-_urwdin-regular-webfont.woff2') format('woff2'),
+       url('./assets/fonts/urw_-_urwdin-regular-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'urw_din';
+  src: url('./assets/fonts/urw_-_urwdin-light-webfont.woff2') format('woff2'),
+       url('./assets/fonts/urw_-_urwdin-light-webfont.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'urw_din';
+  src: url('./assets/fonts/urw_-_urwdin-lightitalic-webfont.woff2') format('woff2'),
+       url('./assets/fonts/urw_-_urwdin-lightitalic-webfont.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+}
+
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: geometricPrecision;
-  font-family: "URW DIN", Arial, sans-serif; 
+  font-family: "urw_din", Arial, sans-serif; 
 }
-
-/* @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700'); */

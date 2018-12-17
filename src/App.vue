@@ -1,8 +1,7 @@
 <template>
   <div id="app" class="p-5">
     <div class="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/">Home</router-link>
     </div>
     <router-view/>
     <div class="footer pt-6 mt-7 pb-6 mb-7 border-top">
