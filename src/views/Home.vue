@@ -52,7 +52,6 @@
         </div>
       </div>
       <div slot="body" v-if="modal.modalView==='login'">
-        <p class="lead"></p>
         <div class="rating-container d-flex">
           <div class="w-50 pr-7 d-flex flex-column justify-content-between">
             <h5>Login using bank credentials</h5>
@@ -70,6 +69,33 @@
         &nbsp;
       </div>
     </modal>
+    <modal v-if="modal.activeModal==='welcome'" @close="closeModal()" :headerBorder="false" :bgSplit="false">
+      <div slot="header">
+        <h2><img src="../assets/images/personal.svg" class="pr-4" />My personal data</h2>
+      </div>
+      <div slot="body" v-if="modal.modalView==='loading'">
+        <div class="d-flex flex-column mt-5 align-items-center">
+          <div class="circle-loader">
+            <div class="checkmark draw"></div>
+          </div>
+        </div>
+      </div>
+      <div slot="body" v-if="modal.modalView==='welcome'">
+        <div class="rating-container d-flex">
+          <div class="w-50 pr-7 d-flex flex-column justify-content-top">
+            <p>We gathered this basic info from the public sources:</p>
+            <b>Name etc.</b>
+          </div>
+          <div class="w-50 pl-7 d-flex flex-column justify-content-top">
+            <p>Enrich your profile with the additional data from these available sources:</p>
+          </div>
+        </div>
+      </div>
+      <div slot="footer" >
+        <button type="button" class="btn btn-lg btn-light mr-2 font-weight-bold py-3 px-5">Cancel</button>
+        <button type="button" class="btn btn-lg btn-warning font-weight-bold py-3 px-5">All good, continue</button>
+      </div>
+    </modal>
   </div>
 </template>
 
@@ -82,12 +108,21 @@ export default {
   components: {
     'modal': modal
   },
+  props: {
+    'welcome': Boolean
+  },
   data () {
     return {
       modal: {
         activeModal: '', // login
         modalView: 'login'
       }
+    }
+  },
+  created () {
+    if (this.$props.welcome) {
+      this.modal.activeModal = 'welcome'
+      this.modal.modalView = 'welcome'
     }
   },
   methods: {

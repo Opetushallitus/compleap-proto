@@ -14,7 +14,7 @@
                   default body
             </slot>
           </div>
-          <div class="modal-footer align-self-end">
+          <div class="modal-footer pb-0 pt-4 px-0">
             <slot name="footer">
               default footer
             </slot>

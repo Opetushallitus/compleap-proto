@@ -7,7 +7,7 @@
       </h1>
       <h5>Provided by a trusted service provider</h5>
       <div class="d-flex flex-row">
-        <router-link to="/" tag="button" class="btn btn-large">Continue to the service ></router-link>
+        <router-link to="/welcome" tag="button" class="btn btn-large">Continue to the service ></router-link>
       </div>
     </div>
   </div>
