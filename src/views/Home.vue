@@ -69,44 +69,20 @@
         &nbsp;
       </div>
     </modal>
-    <modal v-if="modal.activeModal==='welcome'" @close="closeModal()" :headerBorder="false" :bgSplit="false">
-      <div slot="header">
-        <h2><img src="../assets/images/personal.svg" class="pr-4" />My personal data</h2>
-      </div>
-      <div slot="body" v-if="modal.modalView==='loading'">
-        <div class="d-flex flex-column mt-5 align-items-center">
-          <div class="circle-loader">
-            <div class="checkmark draw"></div>
-          </div>
-        </div>
-      </div>
-      <div slot="body" v-if="modal.modalView==='welcome'">
-        <div class="rating-container d-flex">
-          <div class="w-50 pr-7 d-flex flex-column justify-content-top">
-            <p>We gathered this basic info from the public sources:</p>
-            <b>Name etc.</b>
-          </div>
-          <div class="w-50 pl-7 d-flex flex-column justify-content-top">
-            <p>Enrich your profile with the additional data from these available sources:</p>
-          </div>
-        </div>
-      </div>
-      <div slot="footer" >
-        <button type="button" class="btn btn-lg btn-light mr-2 font-weight-bold py-3 px-5">Cancel</button>
-        <button type="button" class="btn btn-lg btn-warning font-weight-bold py-3 px-5">All good, continue</button>
-      </div>
-    </modal>
+    <welcome v-if="modal.activeModal==='welcome'" :showModal="true" />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import modal from '@/components/modal.vue'
+import Welcome from '@/components/Welcome.vue'
 
 export default {
   name: 'home',
   components: {
-    'modal': modal
+    'modal': modal,
+    'welcome': Welcome
   },
   props: {
     'welcome': Boolean

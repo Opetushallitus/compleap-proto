@@ -1,0 +1,12 @@
+{
+    "basicInfo": {
+        "name": "Maryam Margain",
+        "age": "28",
+        "city": "Brussels"
+    },
+    "additionalInfo": [
+        "Completed studies",
+        "Worklife services",
+        "Previous study applications"
+    ]
+}
