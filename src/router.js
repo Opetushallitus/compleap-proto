@@ -25,6 +25,11 @@ export default new Router({
       component: () => import(/* webpackChunkName: "authenticate" */ './views/Authenticate.vue')
     },
     {
+      path: '/profile',
+      name: 'profile',
+      component: () => import(/* webpackChunkName: "authenticate" */ './views/Profile.vue')
+    },
+    {
       path: '*',
       name: 'error',
       component: () => import(/* webpackChunkName: "error" */ './views/Error.vue')

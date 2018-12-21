@@ -7,7 +7,7 @@
             <slot name="header">
               default header
             </slot>
-            <button class="modal-default-button" @click="$emit('close')" title="Sulje">✕</button>
+            <button class="modal-default-button" @click="$emit('close')" title="Close">✕</button>
           </div>
           <div class="modal-body">
             <slot name="body">

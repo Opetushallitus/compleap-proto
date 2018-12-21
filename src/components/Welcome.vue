@@ -21,19 +21,16 @@
           </div>
           <div class="w-50 pl-7 d-flex flex-column justify-content-top">
             <p>Enrich your profile with the additional data from these available sources:</p>
-            <div v-for="info in personalData.additionalInfo" :key="info">
-              <label class="font-weight-bold">
-                <input type="checkbox" value="" />
-                {{info}}
-              </label>
+            <div v-for="(info, index) in personalData.additionalInfo" :key="index" class="custom-control custom-checkbox">
+              <input type="checkbox" checked class="custom-control-input" :id="'InfoCheck'+index">
+              <label class="custom-control-label" :for="'InfoCheck'+index">{{info}}</label>
             </div>
-
           </div>
         </div>
       </div>
       <div slot="footer" >
-        <button type="button" class="btn btn-lg btn-light mr-2 font-weight-bold py-3 px-5">Cancel</button>
-        <button type="button" class="btn btn-lg btn-warning font-weight-bold py-3 px-5">All good, continue</button>
+        <button type="button" class="btn btn-lg btn-light mr-2 font-weight-bold py-3 px-5" v-on:click="$router.push('/')">Cancel</button>
+        <button type="button" class="btn btn-lg btn-warning font-weight-bold py-3 px-5" v-on:click="$router.push('/profile')">All good, continue</button>
       </div>
     </modal>
   </div>

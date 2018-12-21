@@ -87,6 +87,11 @@ export default {
   props: {
     'welcome': Boolean
   },
+  watch: {
+    '$route' (to, from) {
+      this.closeModal()
+    }
+  },
   data () {
     return {
       modal: {
