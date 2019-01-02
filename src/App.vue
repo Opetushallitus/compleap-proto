@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="p-5">
+  <div id="app" class="pt-0 pb-5 px-5">
     <div class="nav">
       <router-link to="/">Home</router-link>
     </div>
@@ -38,12 +38,10 @@
 
 .fade-enter-active, .fade-leave-active {
   transition: all 1s;
-  min-height: 100vh;
   opacity: 1;
 }
 .fade-enter, .fade-leave-to {
   opacity: 0;
-  min-height: 0vh;
 }
 
 </style>

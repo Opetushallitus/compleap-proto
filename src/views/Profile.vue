@@ -1,6 +1,10 @@
 <template>
   <div>
+    <transition name="fade" appear>
+      <div class="header-bg" style="height: 90px;">&nbsp;</div>
+    </transition>
     <div class="header d-flex align-items-center">
+      <img src="../assets/images/logo.png" style="width: 200px;" />
       <div>Content</div>
     </div>
   </div>
@@ -55,7 +59,7 @@ export default {
 @import '../style/bootstrap-custom/custom.scss';
 
 .header {
-  height: 100px;
+  height: 90px;
   overflow: visible;
   position: relative;
 }
@@ -63,9 +67,11 @@ export default {
 .header-bg {
     width: 100%;
     position: absolute;
-    height: 640px;
+    height: 90px;
+    max-height: 90px;
     top: 0;
     left: 0;
+    background-color: black;
 }
 
 </style>
