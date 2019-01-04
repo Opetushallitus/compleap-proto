@@ -1,8 +1,5 @@
 <template>
   <div id="app" class="pt-0 pb-5 px-5">
-    <div class="nav">
-      <router-link to="/">Home</router-link>
-    </div>
     <router-view/>
     <div class="footer pt-6 mt-7 pb-6 mb-7 border-top">
       <h4>Compleap.eu</h4>
@@ -18,18 +15,6 @@
 @import './style/typography.scss';
 @import './style/variables.scss';
 @import './style/bootstrap-custom/custom.scss';
-
-.nav {
-  display: none;
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
 
 #app {
   max-width: 1004px;

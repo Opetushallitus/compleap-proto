@@ -30,6 +30,16 @@ export default new Router({
       component: () => import(/* webpackChunkName: "authenticate" */ './views/Profile.vue')
     },
     {
+      path: '/education',
+      name: 'education',
+      component: () => import(/* webpackChunkName: "education" */ './views/Education.vue')
+    },
+    {
+      path: '/jobs',
+      name: 'jobs',
+      component: () => import(/* webpackChunkName: "jobs" */ './views/Jobs.vue')
+    },
+    {
       path: '*',
       name: 'error',
       component: () => import(/* webpackChunkName: "error" */ './views/Error.vue')

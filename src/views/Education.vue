@@ -8,7 +8,7 @@
       <navigation />
     </div>
     <div class="content">
-      <h2>Profile</h2>
+      <h2>Education</h2>
     </div>
   </div>
 </template>
@@ -20,7 +20,7 @@ import Welcome from '@/components/Welcome.vue'
 import Navigation from '@/components/Navigation.vue'
 
 export default {
-  name: 'home',
+  name: 'education',
   components: {
     'modal': modal,
     'welcome': Welcome,
