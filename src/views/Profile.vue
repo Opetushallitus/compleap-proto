@@ -8,7 +8,7 @@
       <navigation />
     </div>
     <div class="content">
-      <h2>Profile</h2>
+      <profile-basic-info />
     </div>
   </div>
 </template>
@@ -18,13 +18,15 @@
 import modal from '@/components/modal.vue'
 import Welcome from '@/components/Welcome.vue'
 import Navigation from '@/components/Navigation.vue'
+import ProfileBasicInfo from '@/components/ProfileBasicInfo.vue'
 
 export default {
   name: 'home',
   components: {
     'modal': modal,
     'welcome': Welcome,
-    'Navigation': Navigation
+    'Navigation': Navigation,
+    'ProfileBasicInfo': ProfileBasicInfo
   },
   props: {},
   data () {

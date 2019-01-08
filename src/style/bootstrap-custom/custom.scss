@@ -3,8 +3,8 @@
 /* REQUIRED */
 @import '../../../node_modules/bootstrap/scss/functions';
 // DEFAULT Bootstrap replaced by Compleap custom theme
-// @import '../../../node_modules/bootstrap/scss/variables';
 @import '../bootstrap-custom/variables';
+@import '../../../node_modules/bootstrap/scss/variables';
 @import '../../../node_modules/bootstrap/scss/mixins';
 
 // Optional

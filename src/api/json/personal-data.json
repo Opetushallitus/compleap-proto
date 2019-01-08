@@ -2,11 +2,33 @@
     "basicInfo": {
         "name": "Maryam Margain",
         "age": "28",
-        "city": "Brussels"
+        "city": "Brussels",
+        "id": "1001",
+        "blurp": "Customer service professional looking for new challenges"
     },
     "additionalInfo": [
         "Completed studies",
         "Worklife services",
         "Previous study applications"
+    ],
+    "degrees": [
+        {
+            "name": "Master of Arts",
+            "location": "University of Brugge"
+        },
+        {
+            "name": "Master of Science",
+            "location": "University of Helsinki"
+        }
+    ],
+    "jobs": [
+        {
+            "name": "Marketing Assistant",
+            "location": "Londerzeel Ice Cream Factory ltd."
+        },
+        {
+            "name": "Sandwich Artist",
+            "location": "Subway Oy Ab"
+        }
     ]
 }
