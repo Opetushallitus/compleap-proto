@@ -1,0 +1,24 @@
+{
+    "users": [
+        {
+            "name": "Maryam Margain",
+            "id": "1001"
+        },
+        {
+            "name": "Stanis Margain",
+            "id": "1002"
+        },
+        {
+            "name": "Lisa Margain",
+            "id": "1003"
+        },
+        {
+            "name": "Johan Margain",
+            "id": "1004"
+        },
+        {
+            "name": "Eleonora Margain",
+            "id": "1005"
+        }
+    ]
+}

@@ -14,10 +14,14 @@ export default new Router({
       component: Home
     },
     {
-      path: '/welcome',
+      path: '/welcome/:userId?',
       name: 'welcome',
       component: Home,
-      props: { welcome: true }
+      props: (route) => ({
+        default: true,
+        welcome: true,
+        userId: route.params.userId || '1001'
+      })
     },
     {
       path: '/authenticate',

@@ -69,7 +69,7 @@
         &nbsp;
       </div>
     </modal>
-    <welcome v-if="modal.activeModal==='welcome'" :showModal="true" />
+    <welcome v-if="modal.activeModal==='welcome'" :showModal="true" :userId="$props.userId" />
   </div>
 </template>
 
@@ -84,9 +84,7 @@ export default {
     'modal': modal,
     'welcome': Welcome
   },
-  props: {
-    'welcome': Boolean
-  },
+  props: ['welcome', 'userId'],
   watch: {
     '$route' (to, from) {
       this.closeModal()

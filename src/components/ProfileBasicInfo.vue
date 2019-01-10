@@ -2,7 +2,7 @@
   <div>
     <div v-if="personalData.basicInfo" class="pt-5 pb-5 profile-basic-info d-flex justify-content-center align-items-center">
       <div class="pr-3">
-        <img :src="'../profile-images/' + personalData.basicInfo.id + '.png'" />
+        <img :src="'../profile-images/' + personalData.basicInfo.id + '.png'" style="width: 200px;" />
       </div>
       <div class="pl-2 pr-7 border-right w-50">
         <p>{{personalData.basicInfo.blurp}}</p>
@@ -11,20 +11,20 @@
       </div>
       <div class="pl-7 w-50">
         <ul class="mt-2 mb-2">
-          <li v-for="(degree, index) in personalData.degrees" :key="index" class="d-flex align-items-start">
+          <li class="d-flex align-items-start">
             <img src="../assets/images/degree.svg" class="pr-3 pt-1" />
             <div class="pb-3">
-              <strong>{{degree.name}}</strong><br />
-              <small>{{degree.location}}</small>
+              <strong>{{personalData.degrees[0].name}}</strong><br />
+              <small>{{personalData.degrees[0].location}}</small>
             </div>
           </li>
         </ul>
         <ul class="mt-2 mb-2">
-          <li v-for="(job, index) in personalData.jobs" :key="index" class="d-flex align-items-start">
+          <li class="d-flex align-items-start">
             <img src="../assets/images/job.svg" class="pr-3 pt-1" />
             <div class="pb-3">
-              <strong>{{job.name}}</strong><br />
-              <small>{{job.location}}</small>
+              <strong>{{personalData.jobs[0].name}}</strong><br />
+              <small>{{personalData.jobs[0].location}}</small>
             </div>
           </li>
         </ul>

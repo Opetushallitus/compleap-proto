@@ -29,4 +29,18 @@
   opacity: 0;
 }
 
+.slide-enter-active, .slide-leave-active {
+  transition: all .3s;
+  transform: scale(1,1);
+  transform-origin: top right;
+  opacity: 1;
+}
+.slide-enter, .slide-leave-to {
+  transform: scale(0,0);
+  opacity: .3;
+}
+
+.hidden {
+  display: none;
+}
 </style>

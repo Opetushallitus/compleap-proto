@@ -1,4 +1,5 @@
-import personalData from './json/personal-data.json'
+import personalData from './json/personal-data.js'
+import users from './json/users.json'
 
 const fetchJson = (mockApiData, delay = 0) => {
   return new Promise((resolve) => {
@@ -10,7 +11,10 @@ const fetchJson = (mockApiData, delay = 0) => {
 }
 
 export default {
-  getPersonalData () {
-    return fetchJson(personalData)
+  getPersonalData (id) {
+    return fetchJson(personalData[id])
+  },
+  getUsers () {
+    return fetchJson(users)
   }
 }
