@@ -43,4 +43,9 @@
 .hidden {
   display: none;
 }
+
+.section-head {
+  text-align: left;
+  background-color: $gray-100;
+}
 </style>

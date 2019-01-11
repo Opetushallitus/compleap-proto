@@ -9,6 +9,7 @@
     </div>
     <div class="content">
       <profile-basic-info />
+      <competence-profile />
     </div>
   </div>
 </template>
@@ -19,6 +20,7 @@ import modal from '@/components/modal.vue'
 import Welcome from '@/components/Welcome.vue'
 import Navigation from '@/components/Navigation.vue'
 import ProfileBasicInfo from '@/components/ProfileBasicInfo.vue'
+import CompetenceProfile from '@/components/CompetenceProfile.vue'
 
 export default {
   name: 'home',
@@ -26,7 +28,8 @@ export default {
     'modal': modal,
     'welcome': Welcome,
     'Navigation': Navigation,
-    'ProfileBasicInfo': ProfileBasicInfo
+    'ProfileBasicInfo': ProfileBasicInfo,
+    'CompetenceProfile': CompetenceProfile
   },
   props: {},
   data () {
