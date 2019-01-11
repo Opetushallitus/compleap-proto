@@ -37,7 +37,7 @@ personalData[1001] = {
 
 personalData[1002] = {
   'basicInfo': {
-    'name': 'Stanis Margain',
+    'name': 'Stanis Dunlap',
     'age': '38',
     'city': 'Helsinki',
     'id': '1002',
@@ -72,7 +72,7 @@ personalData[1002] = {
 
 personalData[1003] = {
   'basicInfo': {
-    'name': 'Lisa Margain',
+    'name': 'Lisa Cleveland',
     'age': '24',
     'city': 'Helsinki',
     'id': '1003',
@@ -107,7 +107,7 @@ personalData[1003] = {
 
 personalData[1004] = {
   'basicInfo': {
-    'name': 'Johan Margain',
+    'name': 'Johan Mcculloch',
     'age': '31',
     'city': 'Turku',
     'id': '1004',
@@ -142,7 +142,7 @@ personalData[1004] = {
 
 personalData[1005] = {
   'basicInfo': {
-    'name': 'Eleonora Margain',
+    'name': 'Eleonora Bell',
     'age': '22',
     'city': 'Helsinki',
     'id': '1005',
