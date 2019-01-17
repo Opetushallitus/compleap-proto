@@ -1,0 +1,36 @@
+{
+    "competenceGroups": [
+        {
+            "name": "Enterpreneurship",
+            "id": "2001"
+        },
+        {
+            "name": "Learning",
+            "id": "2002"
+        },
+        {
+            "name": "Scitec",
+            "id": "2003"
+        },
+        {
+            "name": "Languages",
+            "id": "2004"
+        },
+        {
+            "name": "Communication",
+            "id": "2005"
+        },
+        {
+            "name": "Social awareness",
+            "id": "2006"
+        },
+        {
+            "name": "Mother tongue",
+            "id": "2007"
+        },
+        {
+            "name": "Cultural",
+            "id": "2008"
+        }
+    ]
+}

@@ -10,14 +10,20 @@
     <div class="content">
       <profile-basic-info />
       <competence-profile />
+      <div class="d-flex flex-wrap boxes border-top pt-5 mt-5">
+        <div class="w-50 education">education</div>
+        <div class="w-50 experience">experience</div>
+        <div class="w-50 open-badges">open-badges</div>
+        <div class="w-50 euro-pass">euro-pass</div>
+        <div class="w-50 key-competences">key-competences</div>
+        <div class="w-50 fields-of-interest">fields-of-interest</div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import modal from '@/components/modal.vue'
-import Welcome from '@/components/Welcome.vue'
 import Navigation from '@/components/Navigation.vue'
 import ProfileBasicInfo from '@/components/ProfileBasicInfo.vue'
 import CompetenceProfile from '@/components/CompetenceProfile.vue'
@@ -25,8 +31,6 @@ import CompetenceProfile from '@/components/CompetenceProfile.vue'
 export default {
   name: 'home',
   components: {
-    'modal': modal,
-    'welcome': Welcome,
     'Navigation': Navigation,
     'ProfileBasicInfo': ProfileBasicInfo,
     'CompetenceProfile': CompetenceProfile
@@ -55,5 +59,8 @@ export default {
     top: 0;
     left: 0;
     background-color: black;
+}
+.boxes div {
+  border: 1px solid gray;
 }
 </style>

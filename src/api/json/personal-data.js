@@ -16,11 +16,89 @@ personalData[1001] = {
   'degrees': [
     {
       'name': 'Master of Arts',
-      'location': 'University of Brugge'
+      'location': 'University of Brugge',
+      'acquired_competences': [
+        {
+          'group_id': '2001',
+          'competences': ['Teaching', 'Customer service', 'Customer empathy', 'Presentation techniques']
+        },
+        {
+          'group_id': '2002',
+          'competences': ['Critical thinking', 'Scientific study methods']
+        },
+        {
+          'group_id': '2003',
+          'competences': ['Teaching', 'Customer service', 'Customer empathy', 'Presentation techniques']
+        },
+        {
+          'group_id': '2004',
+          'competences': ['Critical thinking', 'Scientific study methods']
+        },
+        {
+          'group_id': '2005',
+          'competences': ['Teaching', 'Customer service', 'Customer empathy', 'Presentation techniques']
+        },
+        {
+          'group_id': '2006',
+          'competences': ['Critical thinking', 'Scientific study methods']
+        },
+        {
+          'group_id': '2007',
+          'competences': ['Teaching', 'Customer service', 'Customer empathy', 'Presentation techniques']
+        },
+        {
+          'group_id': '2008',
+          'competences': ['Critical thinking', 'Scientific study methods']
+        }
+      ],
+      'my_interests': [
+        {
+          'group_id': '2001',
+          'competences': ['Thesis writing', 'Customer empathy']
+        },
+        {
+          'group_id': '2002',
+          'competences': ['Critical thinking', 'Scientific study methods']
+        },
+        {
+          'group_id': '2003',
+          'competences': ['Thesis writing', 'Customer empathy']
+        },
+        {
+          'group_id': '2004',
+          'competences': ['Critical thinking', 'Scientific study methods']
+        },
+        {
+          'group_id': '2005',
+          'competences': ['Thesis writing', 'Customer empathy']
+        },
+        {
+          'group_id': '2006',
+          'competences': ['Critical thinking', 'Scientific study methods']
+        },
+        {
+          'group_id': '2007',
+          'competences': ['Thesis writing', 'Customer empathy']
+        },
+        {
+          'group_id': '2008',
+          'competences': ['Critical thinking', 'Scientific study methods']
+        }
+      ]
     },
     {
       'name': 'Master of Science',
-      'location': 'University of Helsinki'
+      'location': 'University of Helsinki',
+      'acquired_competences': [
+        {
+          'group_id': '2003',
+          'competences': ['Teaching', 'Customer service', 'Customer empathy', 'Presentation techniques']
+        },
+        {
+          'group_id': '2004',
+          'competences': ['Critical thinking', 'Scientific study methods']
+        }
+      ]
     }
   ],
   'jobs': [

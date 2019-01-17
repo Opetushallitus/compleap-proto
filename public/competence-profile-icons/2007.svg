@@ -1,0 +1,11 @@
+<svg width="19px" height="18px" viewBox="0 0 19 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="profile" transform="translate(-730.000000, -695.000000)" fill="#333333">
+            <g id="Group-2" transform="translate(730.000000, 695.000000)">
+                <g id="comment-alt-solid">
+                    <path d="M16.625,0 L2.375,0 C1.06503906,0 0,1.0089254 0,2.24986848 L0,12.3742767 C0,13.6152197 1.06503906,14.6241451 2.375,14.6241451 L5.9375,14.6241451 L5.9375,17.5770975 C5.9375,17.9216086 6.353125,18.1219875 6.64628906,17.9180932 L11.28125,14.6241451 L16.625,14.6241451 C17.9349609,14.6241451 19,13.6152197 19,12.3742767 L19,2.24986848 C19,1.0089254 17.9349609,0 16.625,0 Z" id="Path"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

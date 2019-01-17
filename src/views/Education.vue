@@ -15,21 +15,8 @@
 
 <script>
 // @ is an alias to /src
-import modal from '@/components/modal.vue'
-import Welcome from '@/components/Welcome.vue'
-import Navigation from '@/components/Navigation.vue'
-
 export default {
-  name: 'education',
-  components: {
-    'modal': modal,
-    'welcome': Welcome,
-    'Navigation': Navigation
-  },
-  props: {},
-  data () {
-    return {}
-  }
+  name: 'education'
 }
 </script>
 
