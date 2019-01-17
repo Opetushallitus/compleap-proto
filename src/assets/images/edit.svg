@@ -1,0 +1,15 @@
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="boxes-/-koulutus" transform="translate(-411.000000, -80.000000)" fill="#D3D3D3">
+            <g id="box-Koulutus" transform="translate(0.000000, 1.000000)">
+                <g id="actions" transform="translate(411.000000, 31.000000)">
+                    <g id="icons-/-edit" transform="translate(0.000000, 48.000000)">
+                        <g id="pen-solid-copy-2">
+                            <path d="M9.0857273,2.91356355 L13.0862479,6.91425436 L4.39928709,15.6015848 L0.832505162,15.9953412 C0.355017622,16.0481546 -0.0484093508,15.644398 0.00471426295,15.1668901 L0.401578907,11.5974564 L9.0857273,2.91356355 Z M15.5605583,2.31792875 L13.6821699,0.439460354 C13.0962476,-0.146486785 12.1459599,-0.146486785 11.5600377,0.439460354 L9.79289635,2.20667692 L13.793417,6.20736773 L15.5605583,4.44015116 C16.1464806,3.85389152 16.1464806,2.90387589 15.5605583,2.31792875 Z" id="Shape" fill-rule="nonzero"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -17,6 +17,7 @@ personalData[1001] = {
     {
       'name': 'Master of Arts',
       'location': 'University of Brugge',
+      'verified': true,
       'acquired_competences': [
         {
           'group_id': '2001',
@@ -89,6 +90,7 @@ personalData[1001] = {
     {
       'name': 'Master of Science',
       'location': 'University of Helsinki',
+      'verified': true,
       'acquired_competences': [
         {
           'group_id': '2003',

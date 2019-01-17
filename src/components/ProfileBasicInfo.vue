@@ -10,7 +10,7 @@
         <small>{{personalData.basicInfo.city}}</small>
       </div>
       <div class="pl-7 w-50">
-        <ul class="mt-2 mb-2">
+        <ul class="mt-2 mb-2 p-0">
           <li class="d-flex align-items-start">
             <img src="../assets/images/degree.svg" class="pr-3 pt-1" />
             <div class="pb-3">
@@ -19,7 +19,7 @@
             </div>
           </li>
         </ul>
-        <ul class="mt-2 mb-2">
+        <ul class="mt-2 mb-2 p-0">
           <li class="d-flex align-items-start">
             <img src="../assets/images/job.svg" class="pr-3 pt-1" />
             <div class="pb-3">
@@ -56,7 +56,6 @@ export default {
 
 ul {
   list-style-type: none;
-  padding: 0;
   div {
     line-height: 1em;
   }

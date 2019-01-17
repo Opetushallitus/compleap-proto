@@ -3,7 +3,7 @@
     <div class="modal-mask">
       <div class="modal-wrapper">
         <div class="p-5 modal-container d-flex flex-column" :class="{'bgSplit': bgSplit}">
-          <div class="modal-header d-flex justify-content-between" :class="{'border-0': !headerBorder}">
+          <div class="p-0 modal-header d-flex justify-content-between" :class="{'border-0': !headerBorder}">
             <slot name="header">
               default header
             </slot>
@@ -35,6 +35,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
+@import '../style/bootstrap-custom/custom.scss';
 .modal-mask {
   position: fixed;
   z-index: 9998;
@@ -66,6 +67,7 @@ export default {
 
 .modal-header {
   position: relative;
+  min-height: 2em;
   h3 {
     margin-top: 0;
   }
@@ -76,12 +78,13 @@ export default {
 }
 
 .modal-default-button {
-    font-size: 1.8em;
+    font-size: 1.4em;
     background: transparent;
     border: 0;
     position: absolute;
-    right: 0;
-    top: 0;
+    right: -1em;
+    top: -1em;
+    color: $gray-500;
     &:hover {
       cursor: pointer;
     }

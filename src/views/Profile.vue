@@ -10,13 +10,37 @@
     <div class="content">
       <profile-basic-info />
       <competence-profile />
-      <div class="d-flex flex-wrap boxes border-top pt-5 mt-5">
-        <div class="w-50 education">education</div>
-        <div class="w-50 experience">experience</div>
-        <div class="w-50 open-badges">open-badges</div>
-        <div class="w-50 euro-pass">euro-pass</div>
-        <div class="w-50 key-competences">key-competences</div>
-        <div class="w-50 fields-of-interest">fields-of-interest</div>
+      <div class="d-flex flex-wrap boxes border-top pt-3">
+        <div class="w-50 education">
+          <box header="Education">
+            <education />
+          </box>
+        </div>
+        <div class="w-50">
+          <box header="Experience">
+            Master of arts
+          </box>
+        </div>
+        <div class="w-50">
+          <box header="Open badges">
+            Master of arts
+          </box>
+        </div>
+        <div class="w-50">
+          <box header="Europass">
+            Master of arts
+          </box>
+        </div>
+        <div class="w-50">
+          <box header="Key competences">
+            Master of arts
+          </box>
+        </div>
+        <div class="w-50">
+          <box header="Fields of interest">
+            Master of arts
+          </box>
+        </div>
       </div>
     </div>
   </div>
@@ -27,13 +51,17 @@
 import Navigation from '@/components/Navigation.vue'
 import ProfileBasicInfo from '@/components/ProfileBasicInfo.vue'
 import CompetenceProfile from '@/components/CompetenceProfile.vue'
+import box from '@/components/box.vue'
+import Education from '@/components/Education.vue'
 
 export default {
   name: 'home',
   components: {
     'Navigation': Navigation,
     'ProfileBasicInfo': ProfileBasicInfo,
-    'CompetenceProfile': CompetenceProfile
+    'CompetenceProfile': CompetenceProfile,
+    'box': box,
+    'Education': Education
   },
   props: {},
   data () {
@@ -60,7 +88,19 @@ export default {
     left: 0;
     background-color: black;
 }
-.boxes div {
-  border: 1px solid gray;
+.box {
+  border: 1px solid lightgray;
+}
+.boxes {
+  &>div:nth-child(odd) {
+    padding-right: 1em;
+    padding-bottom: 1em;
+    padding-top: 1em;
+  }
+  &>div:nth-child(even) {
+    padding-left: 1em;
+    padding-bottom: 1em;
+    padding-top: 1em;
+  }
 }
 </style>
