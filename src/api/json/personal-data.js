@@ -18,6 +18,8 @@ personalData[1001] = {
       'name': 'Master of Arts',
       'location': 'University of Brugge',
       'verified': true,
+      'from': '2015/2',
+      'to': '2018/8',
       'acquired_competences': [
         {
           'group_id': '2001',
@@ -99,6 +101,12 @@ personalData[1001] = {
         {
           'group_id': '2004',
           'competences': ['Critical thinking', 'Scientific study methods']
+        }
+      ],
+      'my_interests': [
+        {
+          'group_id': '2001',
+          'competences': ['Thesis writing', 'Customer empathy']
         }
       ]
     }

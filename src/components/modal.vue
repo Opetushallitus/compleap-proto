@@ -9,9 +9,9 @@
             </slot>
             <button class="modal-default-button" @click="$emit('close')" title="Close">✕</button>
           </div>
-          <div class="modal-body">
+          <div class="modal-body p-0 pt-5">
             <slot name="body">
-                  default body
+              default body
             </slot>
           </div>
           <div class="modal-footer pb-0 pt-4 px-0">
