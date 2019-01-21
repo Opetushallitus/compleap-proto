@@ -67,10 +67,10 @@
             <div class="competences p-3 d-flex flex-column align-items-center">
               <h5>Verify competences!</h5>
               <ul class="p-0 m-0 pl-2">
-                <li v-for="(competence, index) in getCompetences()" :key="`${index}-comp`" class="competence" v-on:click="unVerify(index, competence)">
+                <li v-for="(competence, index) in getCompetences(true)" :key="`${index}-comp`" class="competence" v-on:click="unVerify(index, competence)">
                   <span>{{competence}}</span>
                 </li>
-                <li v-for="(interest, index) in getInterests()" :key="`${index}-int`" class="interest" v-on:click="verify(index, interest)">
+                <li v-for="(interest, index) in getCompetences(false)" :key="`${index}-int`" class="interest" v-on:click="verify(index, interest)">
                   <span>{{interest}}</span>
                 </li>
               </ul>
@@ -111,31 +111,22 @@ export default {
       this.degreeDataCopy = this.personalData.degrees[this.editId]
       this.openModal('edit')
     },
-    getCompetences () {
+    getCompetences (verified) {
       let competences = []
-      _.forEach(this.degreeDataCopy.acquired_competences, (acquiredCompetence) => {
-        competences.push(acquiredCompetence.competences)
+      _.forEach(_.filter(this.degreeDataCopy.competences, { 'verified': verified }), (competence) => {
+        competences.push(competence.competence)
       })
       // Return a flat unique array of competences
       return _.uniq(_.flatten(competences))
     },
-    getInterests () {
-      let interests = []
-      _.forEach(this.degreeDataCopy.my_interests, (myInterests) => {
-        interests.push(myInterests.competences)
-      })
-      // Return a flat unique array of competences
-      return _.uniq(_.flatten(interests))
-    },
     verify (index, competence) {
       console.log(index, competence)
-      /*
       let copy = this.degreeDataCopy.my_interests[index]
+      console.log(copy)
       this.degreeDataCopy.acquired_competences.push(copy)
       this.degreeDataCopy.my_interests.splice(index, 1)
       this.getCompetences()
       this.getInterests()
-      */
     },
     unVerify (index, competence) {
       console.log(index, competence)

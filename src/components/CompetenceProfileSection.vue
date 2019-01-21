@@ -5,10 +5,10 @@
       {{$props.name}}
     </h4>
     <ul class="p-0 m-0 pl-2">
-      <li v-show="showMyCompetences" v-for="(competence, index) in $props.competences" :key="`${index}-comp`" class="competence">
+      <li v-show="showVerified" v-for="(competence, index) in $props.competences" :key="`${index}-comp`" class="competence">
         <span>{{competence}}</span>
       </li>
-      <li v-show="!showMyCompetences" v-for="(interest, index) in $props.interests" :key="`${index}-int`" class="interest">
+      <li v-show="!showVerified" v-for="(interest, index) in $props.interests" :key="`${index}-int`" class="interest">
         <span>{{interest}}</span>
       </li>
     </ul>
@@ -23,7 +23,7 @@ export default {
     name: String,
     competences: Array,
     interests: Array,
-    showMyCompetences: Boolean
+    showVerified: Boolean
   }
 }
 </script>

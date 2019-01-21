@@ -20,94 +20,96 @@ personalData[1001] = {
       'verified': true,
       'from': '2015/2',
       'to': '2018/8',
-      'acquired_competences': [
-        {
-          'group_id': '2001',
-          'competences': ['Teaching', 'Customer service', 'Customer empathy', 'Presentation techniques']
-        },
-        {
-          'group_id': '2002',
-          'competences': ['Critical thinking', 'Scientific study methods']
-        },
-        {
-          'group_id': '2003',
-          'competences': ['Teaching', 'Customer service', 'Customer empathy', 'Presentation techniques']
-        },
-        {
-          'group_id': '2004',
-          'competences': ['Critical thinking', 'Scientific study methods']
-        },
-        {
-          'group_id': '2005',
-          'competences': ['Teaching', 'Customer service', 'Customer empathy', 'Presentation techniques']
-        },
-        {
-          'group_id': '2006',
-          'competences': ['Critical thinking', 'Scientific study methods']
-        },
-        {
-          'group_id': '2007',
-          'competences': ['Teaching', 'Customer service', 'Customer empathy', 'Presentation techniques']
-        },
-        {
-          'group_id': '2008',
-          'competences': ['Critical thinking', 'Scientific study methods']
-        }
-      ],
-      'my_interests': [
-        {
-          'group_id': '2001',
-          'competences': ['Thesis writing', 'Customer empathy']
-        },
-        {
-          'group_id': '2002',
-          'competences': ['Critical thinking', 'Scientific study methods']
-        },
-        {
-          'group_id': '2003',
-          'competences': ['Thesis writing', 'Customer empathy']
-        },
-        {
-          'group_id': '2004',
-          'competences': ['Critical thinking', 'Scientific study methods']
-        },
-        {
-          'group_id': '2005',
-          'competences': ['Thesis writing', 'Customer empathy']
-        },
-        {
-          'group_id': '2006',
-          'competences': ['Critical thinking', 'Scientific study methods']
-        },
-        {
-          'group_id': '2007',
-          'competences': ['Thesis writing', 'Customer empathy']
-        },
-        {
-          'group_id': '2008',
-          'competences': ['Critical thinking', 'Scientific study methods']
-        }
+      'competences': [
+        { 'gid': '2001', 'verified': true, 'competence': 'd1 Teaching verified' },
+        { 'gid': '2001', 'verified': true, 'competence': 'd1 Customer service verified' },
+        { 'gid': '2001', 'verified': true, 'competence': 'd1 Presentation techniques verified' },
+        { 'gid': '2002', 'verified': true, 'competence': 'Critical thinking' },
+        { 'gid': '2002', 'verified': true, 'competence': 'Scientific study methods' },
+        { 'gid': '2003', 'verified': true, 'competence': 'Teaching' },
+        { 'gid': '2003', 'verified': true, 'competence': 'Customer service' },
+        { 'gid': '2003', 'verified': true, 'competence': 'Presentation techniques' },
+        { 'gid': '2004', 'verified': true, 'competence': 'Critical thinking' },
+        { 'gid': '2004', 'verified': true, 'competence': 'Scientific study methods' },
+        { 'gid': '2005', 'verified': true, 'competence': 'Customer service' },
+        { 'gid': '2005', 'verified': true, 'competence': 'Presentation techniques' },
+        { 'gid': '2005', 'verified': true, 'competence': 'Customer empathy' },
+        { 'gid': '2006', 'verified': true, 'competence': 'Scientific study methods' },
+        { 'gid': '2006', 'verified': true, 'competence': 'Critical thinking' },
+        { 'gid': '2007', 'verified': true, 'competence': 'Presentation techniques' },
+        { 'gid': '2007', 'verified': true, 'competence': 'Teaching' },
+        { 'gid': '2007', 'verified': true, 'competence': 'Customer empathy' },
+        { 'gid': '2008', 'verified': true, 'competence': 'Teaching' },
+        { 'gid': '2008', 'verified': true, 'competence': 'Scientific study methods' },
+
+        { 'gid': '2001', 'verified': false, 'competence': 'd1 Teaching' },
+        { 'gid': '2001', 'verified': false, 'competence': 'd1 Customer service' },
+        { 'gid': '2001', 'verified': false, 'competence': 'd1 Customer empathy' },
+        { 'gid': '2002', 'verified': false, 'competence': 'Critical thinking' },
+        { 'gid': '2002', 'verified': false, 'competence': 'Scientific study methods' },
+        { 'gid': '2003', 'verified': false, 'competence': 'Teaching' },
+        { 'gid': '2003', 'verified': false, 'competence': 'Customer service' },
+        { 'gid': '2003', 'verified': false, 'competence': 'Presentation techniques' },
+        { 'gid': '2004', 'verified': false, 'competence': 'Critical thinking' },
+        { 'gid': '2004', 'verified': false, 'competence': 'Scientific study methods' },
+        { 'gid': '2005', 'verified': false, 'competence': 'Customer service' },
+        { 'gid': '2005', 'verified': false, 'competence': 'Presentation techniques' },
+        { 'gid': '2005', 'verified': false, 'competence': 'Customer empathy' },
+        { 'gid': '2006', 'verified': false, 'competence': 'Scientific study methods' },
+        { 'gid': '2006', 'verified': false, 'competence': 'Critical thinking' },
+        { 'gid': '2007', 'verified': false, 'competence': 'Presentation techniques' },
+        { 'gid': '2007', 'verified': false, 'competence': 'Teaching' },
+        { 'gid': '2007', 'verified': false, 'competence': 'Customer empathy' },
+        { 'gid': '2008', 'verified': false, 'competence': 'Teaching' },
+        { 'gid': '2008', 'verified': false, 'competence': 'Scientific study methods' }
       ]
     },
     {
       'name': 'Master of Science',
       'location': 'University of Helsinki',
       'verified': true,
-      'acquired_competences': [
-        {
-          'group_id': '2003',
-          'competences': ['Teaching', 'Customer service', 'Customer empathy', 'Presentation techniques']
-        },
-        {
-          'group_id': '2004',
-          'competences': ['Critical thinking', 'Scientific study methods']
-        }
-      ],
-      'my_interests': [
-        {
-          'group_id': '2001',
-          'competences': ['Thesis writing', 'Customer empathy']
-        }
+      'competences': [
+        { 'gid': '2001', 'verified': true, 'competence': 'd2 Customer service verified' },
+        { 'gid': '2001', 'verified': true, 'competence': 'd2 Customer empathy verified' },
+        { 'gid': '2001', 'verified': true, 'competence': 'd2 Presentation techniques verified' },
+        { 'gid': '2002', 'verified': true, 'competence': 'Critical thinking' },
+        { 'gid': '2002', 'verified': true, 'competence': 'Scientific study methods' },
+        { 'gid': '2003', 'verified': true, 'competence': 'Teaching' },
+        { 'gid': '2003', 'verified': true, 'competence': 'Customer service' },
+        { 'gid': '2003', 'verified': true, 'competence': 'Presentation techniques' },
+        { 'gid': '2004', 'verified': true, 'competence': 'Critical thinking' },
+        { 'gid': '2004', 'verified': true, 'competence': 'Scientific study methods' },
+        { 'gid': '2005', 'verified': true, 'competence': 'Customer service' },
+        { 'gid': '2005', 'verified': true, 'competence': 'Presentation techniques' },
+        { 'gid': '2005', 'verified': true, 'competence': 'Customer empathy' },
+        { 'gid': '2006', 'verified': true, 'competence': 'Scientific study methods' },
+        { 'gid': '2006', 'verified': true, 'competence': 'Critical thinking' },
+        { 'gid': '2007', 'verified': true, 'competence': 'Presentation techniques' },
+        { 'gid': '2007', 'verified': true, 'competence': 'Teaching' },
+        { 'gid': '2007', 'verified': true, 'competence': 'Customer empathy' },
+        { 'gid': '2008', 'verified': true, 'competence': 'Teaching' },
+        { 'gid': '2008', 'verified': true, 'competence': 'Scientific study methods' },
+
+        { 'gid': '2001', 'verified': false, 'competence': 'd2 Teaching' },
+        { 'gid': '2001', 'verified': false, 'competence': 'd2 Customer empathy' },
+        { 'gid': '2001', 'verified': false, 'competence': 'd2 Presentation techniques' },
+        { 'gid': '2002', 'verified': false, 'competence': 'Critical thinking' },
+        { 'gid': '2002', 'verified': false, 'competence': 'Scientific study methods' },
+        { 'gid': '2003', 'verified': false, 'competence': 'Teaching' },
+        { 'gid': '2003', 'verified': false, 'competence': 'Customer service' },
+        { 'gid': '2003', 'verified': false, 'competence': 'Presentation techniques' },
+        { 'gid': '2004', 'verified': false, 'competence': 'Critical thinking' },
+        { 'gid': '2004', 'verified': false, 'competence': 'Scientific study methods' },
+        { 'gid': '2005', 'verified': false, 'competence': 'Customer service' },
+        { 'gid': '2005', 'verified': false, 'competence': 'Presentation techniques' },
+        { 'gid': '2005', 'verified': false, 'competence': 'Customer empathy' },
+        { 'gid': '2006', 'verified': false, 'competence': 'Scientific study methods' },
+        { 'gid': '2006', 'verified': false, 'competence': 'Critical thinking' },
+        { 'gid': '2007', 'verified': false, 'competence': 'Presentation techniques' },
+        { 'gid': '2007', 'verified': false, 'competence': 'Teaching' },
+        { 'gid': '2007', 'verified': false, 'competence': 'Customer empathy' },
+        { 'gid': '2008', 'verified': false, 'competence': 'Teaching' },
+        { 'gid': '2008', 'verified': false, 'competence': 'Scientific study methods' }
       ]
     }
   ],
