@@ -27,6 +27,9 @@ export default new Vuex.Store({
         .getPersonalData(id)
         .then(data => commit('setPersonalData', data))
     },
+    setPersonalData ({ commit }, data) {
+      return commit('setPersonalData', data)
+    },
     getUsers ({ commit }) {
       return api
         .getUsers()

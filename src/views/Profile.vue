@@ -10,33 +10,33 @@
     <div class="content">
       <profile-basic-info />
       <competence-profile />
-      <div class="d-flex flex-wrap boxes border-top pt-3">
-        <div class="w-50 education">
+      <div class="d-flex flex-wrap flex-column boxes border-top pt-3">
+        <div class="w-50 education pr-3 pb-5 pt-3">
           <box header="Education">
             <education />
           </box>
         </div>
-        <div class="w-50">
-          <box header="Experience">
-            Master of arts
-          </box>
-        </div>
-        <div class="w-50">
+        <div class="w-50 pr-3 pb-5">
           <box header="Open badges">
             Master of arts
           </box>
         </div>
-        <div class="w-50">
-          <box header="Europass">
-            Master of arts
-          </box>
-        </div>
-        <div class="w-50">
+        <div class="w-50 pr-3 pb-5">
           <box header="Key competences">
             Master of arts
           </box>
         </div>
-        <div class="w-50">
+        <div class="w-50 pl-3 pt-3">
+          <box header="Experience">
+            <experience />
+          </box>
+        </div>
+        <div class="w-50 pl-3 pt-5">
+          <box header="Europass">
+            Master of arts
+          </box>
+        </div>
+        <div class="w-50 pl-3 pt-5">
           <box header="Fields of interest">
             Master of arts
           </box>
@@ -53,6 +53,7 @@ import ProfileBasicInfo from '@/components/ProfileBasicInfo.vue'
 import CompetenceProfile from '@/components/CompetenceProfile.vue'
 import box from '@/components/box.vue'
 import Education from '@/components/Education.vue'
+import Experience from '@/components/Experience.vue'
 
 export default {
   name: 'home',
@@ -61,7 +62,8 @@ export default {
     'ProfileBasicInfo': ProfileBasicInfo,
     'CompetenceProfile': CompetenceProfile,
     'box': box,
-    'Education': Education
+    'Education': Education,
+    'Experience': Experience
   },
   props: {},
   data () {
@@ -92,15 +94,6 @@ export default {
   border: 1px solid lightgray;
 }
 .boxes {
-  &>div:nth-child(odd) {
-    padding-right: 1em;
-    padding-bottom: 1em;
-    padding-top: 1em;
-  }
-  &>div:nth-child(even) {
-    padding-left: 1em;
-    padding-bottom: 1em;
-    padding-top: 1em;
-  }
+  height: 43em;
 }
 </style>

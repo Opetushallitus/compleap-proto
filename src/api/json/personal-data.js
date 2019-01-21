@@ -116,11 +116,21 @@ personalData[1001] = {
   'jobs': [
     {
       'name': 'Marketing Assistant',
-      'location': 'Londerzeel Ice Cream Factory ltd.'
+      'location': 'Londerzeel Ice Cream Factory ltd.',
+      'from': '2015/2',
+      'to': '2016/1'
     },
     {
       'name': 'Sandwich Artist',
-      'location': 'Subway Oy Ab'
+      'location': 'Subway Oy Ab',
+      'from': '2017/2',
+      'to': '2018/1'
+    },
+    {
+      'name': 'Research Assistant',
+      'location': 'Tampere Technical University',
+      'from': '2018/2',
+      'to': '2019/1'
     }
   ]
 }

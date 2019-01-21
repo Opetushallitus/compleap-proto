@@ -44,7 +44,6 @@ export default {
       _.forEach(x, (degree) => {
         // Find all competences with the provided group id
         _.forEach((_.filter(degree.competences, { 'gid': id, 'verified': verified })), (competence) => {
-          console.log(competence)
           competences.push(competence.competence)
         })
       })
@@ -57,10 +56,12 @@ export default {
       showVerified: true // toggle between My competences and My interests. Verified / Not verified
     }
   },
-  computed: mapState([
-    'personalData',
-    'competenceGroups'
-  ])
+  computed: {
+    ...mapState([
+      'personalData',
+      'competenceGroups'
+    ])
+  }
 }
 </script>
 

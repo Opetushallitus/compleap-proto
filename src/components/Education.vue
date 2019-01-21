@@ -26,39 +26,39 @@
         <form>
           <div class="form-group">
             <label for="ed_provider">Education provider</label>
-            <input :value="degreeDataCopy.location" type="text" class="form-control" id="ed_provider" placeholder="Name of education provider">
+            <input value="degreeDataCopy.location" v-model="degreeDataCopy.location" type="text" class="form-control" id="ed_provider" placeholder="Name of education provider">
           </div>
           <div class="form-group">
             <label for="degree_title">Degree title</label>
-            <input :value="degreeDataCopy.name" type="text" class="form-control" id="degree_title" placeholder="Degree title">
+            <input value="degreeDataCopy.name" v-model="degreeDataCopy.name" type="text" class="form-control" id="degree_title" placeholder="Degree title">
           </div>
           <div class="form-row">
             <div class="form-group col-2">
               <label for="from_month">From</label>
-              <select class="form-control" id="from_month">
+              <select class="form-control" id="from_month" v-model="dates.fromMonth">
                 <option value="">Select month</option>
-                <option v-for="index in 12" :key="index" :value="index" :selected="(new Date(degreeDataCopy.from).getMonth()+1) === index">{{months(index-1)}}</option>
+                <option v-for="index in 12" :key="index" :value="index">{{months(index-1)}}</option>
               </select>
             </div>
             <div class="form-group col-2">
               <label for="from_year">&nbsp;</label>
-              <select class="form-control" id="from_year">
+              <select class="form-control" id="from_year" v-model="dates.fromYear">
                 <option value="">Select year</option>
-                <option v-for="(year, index) in years()" :key="index" :value="year" :selected="(new Date(degreeDataCopy.from).getFullYear()) === year">{{year}}</option>
+                <option v-for="(year, index) in years()" :key="index" :value="year">{{year}}</option>
               </select>
             </div>
             <div class="form-group col-2 ml-5">
               <label for="to_month">To</label>
-              <select class="form-control" id="to_month">
+              <select class="form-control" id="to_month" v-model="dates.toMonth">
                 <option value="">Select month</option>
-                <option v-for="index in 12" :key="index" :value="index" :selected="(new Date(degreeDataCopy.to).getMonth()+1) === index">{{months(index-1)}}</option>
+                <option v-for="index in 12" :key="index" :value="index">{{months(index-1)}}</option>
               </select>
             </div>
             <div class="form-group col-2">
               <label for="to_year">&nbsp;</label>
-              <select class="form-control" id="to_year">
+              <select class="form-control" id="to_year" v-model="dates.toYear">
                 <option value="">Select year</option>
-                <option v-for="(year, index) in years()" :key="index" :value="year" :selected="(new Date(degreeDataCopy.to).getFullYear()) === year">{{year}}</option>
+                <option v-for="(year, index) in years()" :key="index" :value="year">{{year}}</option>
               </select>
             </div>
           </div>
@@ -67,11 +67,8 @@
             <div class="competences p-3 d-flex flex-column align-items-center">
               <h5>Verify competences!</h5>
               <ul class="p-0 m-0 pl-2">
-                <li v-for="(competence, index) in getCompetences(true)" :key="`${index}-comp`" class="competence" v-on:click="unVerify(index, competence)">
-                  <span>{{competence}}</span>
-                </li>
-                <li v-for="(interest, index) in getCompetences(false)" :key="`${index}-int`" class="interest" v-on:click="verify(index, interest)">
-                  <span>{{interest}}</span>
+                <li v-for="(competence, index) in degreeDataCopy.competences" :key="`${index}-comp`" :class="{'competence': competence.verified, 'interest': !competence.verified}" v-on:click="verifyToggle(index, competence.verified)">
+                  <span>{{competence.competence}}</span>
                 </li>
               </ul>
             </div>
@@ -80,8 +77,8 @@
       </div>
       <div slot="footer">
         <button class="btn btn-text mr-5" v-on:click="closeModal()">Cancel</button>
-        <button class="btn btn-secondary mr-2">Remove</button>
-        <button class="btn btn-warning">Save</button>
+        <button class="btn btn-secondary mr-2" v-on:click="deleteDegree()">Remove</button>
+        <button class="btn btn-warning" v-on:click="save()">Save</button>
       </div>
     </modal>
   </div>
@@ -98,7 +95,19 @@ export default {
     'modal': modal
   },
   methods: {
-    ...mapActions(['getPersonalData']),
+    ...mapActions(['getPersonalData', 'setPersonalData']),
+    save () {
+      // Set dates
+      this.degreeDataCopy.from = this.dates.fromYear + '/' + this.dates.fromMonth
+      this.degreeDataCopy.to = this.dates.toYear + '/' + this.dates.toMonth
+      // Clone edit object to state
+      this.personalData.degrees[this.editId] = _.clone(this.degreeDataCopy)
+      this.setPersonalData(this.personalData)
+      // Reset variables and close modal
+      this.editId = null
+      this.degreeDataCopy = {}
+      this.closeModal()
+    },
     openModal (id) {
       this.modal.modalView = 'edit'
       this.modal.activeModal = id
@@ -108,35 +117,16 @@ export default {
     },
     editDegree (degree) {
       this.editId = degree
-      this.degreeDataCopy = this.personalData.degrees[this.editId]
+      this.degreeDataCopy = _.clone(this.personalData.degrees[this.editId])
+      // Set initial dates
+      this.dates.fromYear = new Date(this.degreeDataCopy.from).getFullYear()
+      this.dates.fromMonth = new Date(this.degreeDataCopy.from).getMonth() + 1
+      this.dates.toYear = new Date(this.degreeDataCopy.to).getFullYear()
+      this.dates.toMonth = new Date(this.degreeDataCopy.to).getMonth() + 1
       this.openModal('edit')
     },
-    getCompetences (verified) {
-      let competences = []
-      _.forEach(_.filter(this.degreeDataCopy.competences, { 'verified': verified }), (competence) => {
-        competences.push(competence.competence)
-      })
-      // Return a flat unique array of competences
-      return _.uniq(_.flatten(competences))
-    },
-    verify (index, competence) {
-      console.log(index, competence)
-      let copy = this.degreeDataCopy.my_interests[index]
-      console.log(copy)
-      this.degreeDataCopy.acquired_competences.push(copy)
-      this.degreeDataCopy.my_interests.splice(index, 1)
-      this.getCompetences()
-      this.getInterests()
-    },
-    unVerify (index, competence) {
-      console.log(index, competence)
-      /*
-      let copy = this.degreeDataCopy.acquired_competences[index]
-      this.degreeDataCopy.my_interests.push(copy)
-      this.degreeDataCopy.acquired_competences.splice(index, 1)
-      this.getCompetences()
-      this.getInterests()
-      */
+    verifyToggle (index, verified) {
+      this.degreeDataCopy.competences[index].verified = !verified
     },
     years () {
       let years = []
@@ -174,7 +164,14 @@ export default {
       editId: '',
       // Copy the degree data to a temp object for editing.
       // To be copied over to personalData.degrees[editId] state when saving.
-      degreeDataCopy: {}
+      degreeDataCopy: {},
+      // Helper for date handling
+      dates: {
+        fromYear: '',
+        fromMonth: '',
+        toYear: '',
+        toMonth: ''
+      }
     }
   },
   created () {
