@@ -13,6 +13,40 @@ personalData[1001] = {
     'Worklife services',
     'Previous study applications'
   ],
+  'keyCompetences': [
+    {
+      'name': 'Communicating in a mother tongue',
+      'level': '5'
+    },
+    {
+      'name': 'Communicating in a foreign language',
+      'level': '2'
+    },
+    {
+      'name': 'Mathematical, scientific and technological competence',
+      'level': '1'
+    },
+    {
+      'name': 'Digital competence',
+      'level': '4'
+    },
+    {
+      'name': 'Learning to learn',
+      'level': '1'
+    },
+    {
+      'name': 'Social and civic competences',
+      'level': '1'
+    },
+    {
+      'name': 'Sense of initiative and entrepreneurship',
+      'level': '4'
+    },
+    {
+      'name': 'Cultural awareness and expression',
+      'level': '3'
+    }
+  ],
   'openBadges': [
     {
       'name': 'Verbal communication',
