@@ -13,6 +13,23 @@ personalData[1001] = {
     'Worklife services',
     'Previous study applications'
   ],
+  'openBadges': [
+    {
+      'name': 'Verbal communication',
+      'issuer': 'Mentors of European Voluntary Services',
+      'badgeFile': 'open-badge-verbal.png'
+    },
+    {
+      'name': 'Reflected mentorship',
+      'issuer': 'Mentors of European Voluntary Services',
+      'badgeFile': 'open-badge-mentorship.png'
+    },
+    {
+      'name': 'Pro active',
+      'issuer': 'European youth exchanges',
+      'badgeFile': 'open-badge-active.png'
+    }
+  ],
   'degrees': [
     {
       'name': 'Master of Arts',

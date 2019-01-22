@@ -18,7 +18,7 @@
         </div>
         <div class="w-50 pr-3 pb-5">
           <box header="Open badges">
-            Master of arts
+            <OpenBadges />
           </box>
         </div>
         <div class="w-50 pr-3 pb-5">
@@ -54,6 +54,7 @@ import CompetenceProfile from '@/components/CompetenceProfile.vue'
 import box from '@/components/box.vue'
 import Education from '@/components/Education.vue'
 import Experience from '@/components/Experience.vue'
+import OpenBadges from '@/components/OpenBadges.vue'
 
 export default {
   name: 'home',
@@ -63,7 +64,8 @@ export default {
     'CompetenceProfile': CompetenceProfile,
     'box': box,
     'Education': Education,
-    'Experience': Experience
+    'Experience': Experience,
+    'OpenBadges': OpenBadges
   },
   props: {},
   data () {
@@ -94,6 +96,6 @@ export default {
   border: 1px solid lightgray;
 }
 .boxes {
-  height: 43em;
+  height: 50em;
 }
 </style>
