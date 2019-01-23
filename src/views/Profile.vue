@@ -32,8 +32,8 @@
           </box>
         </div>
         <div class="w-50 pl-3 pt-5">
-          <box header="Europass">
-            Master of arts
+          <box header="" class="europass">
+            <EuroPass />
           </box>
         </div>
         <div class="w-50 pl-3 pt-5">
@@ -56,6 +56,7 @@ import Education from '@/components/Education.vue'
 import Experience from '@/components/Experience.vue'
 import OpenBadges from '@/components/OpenBadges.vue'
 import KeyCompetences from '@/components/KeyCompetences.vue'
+import EuroPass from '@/components/EuroPass.vue'
 
 export default {
   name: 'home',
@@ -67,7 +68,8 @@ export default {
     'Education': Education,
     'Experience': Experience,
     'OpenBadges': OpenBadges,
-    'KeyCompetences': KeyCompetences
+    'KeyCompetences': KeyCompetences,
+    'EuroPass': EuroPass
   },
   props: {},
   data () {
@@ -96,6 +98,10 @@ export default {
 }
 .box {
   border: 1px solid lightgray;
+  &.europass {
+    border-style: dashed;
+    border-radius: 3em;
+  }
 }
 .boxes {
   height: 70em;
