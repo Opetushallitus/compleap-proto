@@ -11,7 +11,8 @@ export default new Vuex.Store({
   state: {
     personalData: {},
     userList: [],
-    competenceGroups: competenceGroups.competenceGroups
+    competenceGroups: competenceGroups.competenceGroups,
+    educationPath: {}
   },
   mutations: {
     setPersonalData (state, data) {

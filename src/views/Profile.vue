@@ -10,6 +10,7 @@
     <div class="content">
       <profile-basic-info />
       <competence-profile />
+      <educationPath />
       <div class="d-flex flex-wrap flex-column boxes border-top pt-3">
         <div class="w-50 education pr-3 pb-5 pt-3">
           <box header="Education">
@@ -51,6 +52,7 @@
 import Navigation from '@/components/Navigation.vue'
 import ProfileBasicInfo from '@/components/ProfileBasicInfo.vue'
 import CompetenceProfile from '@/components/CompetenceProfile.vue'
+import EducationPath from '@/components/EducationPath.vue'
 import box from '@/components/box.vue'
 import Education from '@/components/Education.vue'
 import Experience from '@/components/Experience.vue'
@@ -64,6 +66,7 @@ export default {
     'Navigation': Navigation,
     'ProfileBasicInfo': ProfileBasicInfo,
     'CompetenceProfile': CompetenceProfile,
+    'EducationPath': EducationPath,
     'box': box,
     'Education': Education,
     'Experience': Experience,
