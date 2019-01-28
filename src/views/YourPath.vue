@@ -7,8 +7,12 @@
       <img src="../assets/images/logo.png" style="width: 200px;" />
       <navigation />
     </div>
-    <div class="content">
-      <h2>Education</h2>
+    <div class="content d-flex flex-column align-items-center mt-6">
+      <img src="../assets/images/path-hero.png" class="mb-6"/>
+      <h1>What's your path like?</h1>
+      <p class="text-center">We all have our unique, lifelong educational path.<br>
+      Let’s write a new chapter to your story.</p>
+      <path-editor />
     </div>
   </div>
 </template>
@@ -16,11 +20,13 @@
 <script>
 // @ is an alias to /src
 import Navigation from '@/components/Navigation.vue'
+import PathEditor from '@/components/PathEditor.vue'
 
 export default {
-  name: 'education',
+  name: 'YourPath',
   components: {
-    'Navigation': Navigation
+    'Navigation': Navigation,
+    'PathEditor': PathEditor
   }
 }
 </script>

@@ -24,6 +24,11 @@ export default new Router({
       })
     },
     {
+      path: '/yourpath',
+      name: 'yourPath',
+      component: () => import(/* webpackChunkName: "path" */ './views/YourPath.vue')
+    },
+    {
       path: '/authenticate',
       name: 'authenticate',
       component: () => import(/* webpackChunkName: "authenticate" */ './views/Authenticate.vue')
