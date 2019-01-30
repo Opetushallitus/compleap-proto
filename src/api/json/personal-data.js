@@ -6,7 +6,8 @@ personalData[1001] = {
     'age': '28',
     'city': 'Brussels',
     'id': '1001',
-    'blurp': 'Customer service professional looking for new challenges'
+    'blurp': 'Customer service professional looking for new challenges',
+    'pathGoalId': ''
   },
   'additionalInfo': [
     'Completed studies',

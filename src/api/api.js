@@ -1,7 +1,9 @@
-import personalData from './json/personal-data.js'
-import users from './json/users.json'
+import personalData from './json/personal-data'
+import users from './json/users'
+import suggestions from './json/path-goal-suggestions'
+import elements from './json/path-elements'
 
-const fetchJson = (mockApiData, delay = 0) => {
+const fetchJson = (mockApiData) => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(mockApiData)
@@ -16,5 +18,11 @@ export default {
   },
   getUsers () {
     return fetchJson(users)
+  },
+  getPathGoalSuggestions (userid) {
+    return fetchJson(suggestions[userid])
+  },
+  getPathElements (userid, pathGoalId) {
+    return fetchJson(elements[userid][pathGoalId])
   }
 }
