@@ -47,7 +47,7 @@ export default {
   },
   props: ['showModal', 'userId'],
   methods: {
-    ...mapActions(['getPersonalData', 'getUsers']),
+    ...mapActions(['getPersonalData']),
     openModal () {
       this.modal.showModal = true
     },
@@ -67,7 +67,6 @@ export default {
     'personalData'
   ]),
   created () {
-    this.getUsers()
     // Default user id 1001
     this.getPersonalData(this.$props.userId)
   }

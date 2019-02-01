@@ -1,0 +1,158 @@
+personalData[1001] = {
+  'basicInfo': {
+    'name': 'Lisa Ellwood',
+    'age': '16',
+    'city': 'Kotka, Finland',
+    'id': '1001',
+    'blurp': 'Trying to find an inspiring new educational path',
+    'pathGoalId': ''
+  },
+  'additionalInfo': [
+    'Completed studies',
+    'Worklife services',
+    'Previous study applications'
+  ],
+  'keyCompetences': [
+    {
+      'name': 'Chemistry',
+      'level': '5'
+    }
+  ],
+  'openBadges': [
+    {
+      'name': 'Verbal communication',
+      'issuer': 'Mentors of European Voluntary Services',
+      'badgeFile': 'open-badge-verbal.png'
+    },
+    {
+      'name': 'Reflected mentorship',
+      'issuer': 'Mentors of European Voluntary Services',
+      'badgeFile': 'open-badge-mentorship.png'
+    },
+    {
+      'name': 'Pro active',
+      'issuer': 'European youth exchanges',
+      'badgeFile': 'open-badge-active.png'
+    }
+  ],
+  'degrees': [
+    {
+      'name': 'Master of Arts',
+      'location': 'University of Brugge',
+      'verified': true,
+      'from': '2015/2',
+      'to': '2018/8',
+      'competences': [
+        { 'gid': '2001', 'verified': true, 'competence': 'd1 Teaching verified' },
+        { 'gid': '2001', 'verified': true, 'competence': 'd1 Customer service verified' },
+        { 'gid': '2001', 'verified': true, 'competence': 'd1 Presentation techniques verified' },
+        { 'gid': '2002', 'verified': true, 'competence': 'Critical thinking' },
+        { 'gid': '2002', 'verified': true, 'competence': 'Scientific study methods' },
+        { 'gid': '2003', 'verified': true, 'competence': 'Teaching' },
+        { 'gid': '2003', 'verified': true, 'competence': 'Customer service' },
+        { 'gid': '2003', 'verified': true, 'competence': 'Presentation techniques' },
+        { 'gid': '2004', 'verified': true, 'competence': 'Critical thinking' },
+        { 'gid': '2004', 'verified': true, 'competence': 'Scientific study methods' },
+        { 'gid': '2005', 'verified': true, 'competence': 'Customer service' },
+        { 'gid': '2005', 'verified': true, 'competence': 'Presentation techniques' },
+        { 'gid': '2005', 'verified': true, 'competence': 'Customer empathy' },
+        { 'gid': '2006', 'verified': true, 'competence': 'Scientific study methods' },
+        { 'gid': '2006', 'verified': true, 'competence': 'Critical thinking' },
+        { 'gid': '2007', 'verified': true, 'competence': 'Presentation techniques' },
+        { 'gid': '2007', 'verified': true, 'competence': 'Teaching' },
+        { 'gid': '2007', 'verified': true, 'competence': 'Customer empathy' },
+        { 'gid': '2008', 'verified': true, 'competence': 'Teaching' },
+        { 'gid': '2008', 'verified': true, 'competence': 'Scientific study methods' },
+
+        { 'gid': '2001', 'verified': false, 'competence': 'd1 Teaching' },
+        { 'gid': '2001', 'verified': false, 'competence': 'd1 Customer service' },
+        { 'gid': '2001', 'verified': false, 'competence': 'd1 Customer empathy' },
+        { 'gid': '2002', 'verified': false, 'competence': 'Critical thinking' },
+        { 'gid': '2002', 'verified': false, 'competence': 'Scientific study methods' },
+        { 'gid': '2003', 'verified': false, 'competence': 'Teaching' },
+        { 'gid': '2003', 'verified': false, 'competence': 'Customer service' },
+        { 'gid': '2003', 'verified': false, 'competence': 'Presentation techniques' },
+        { 'gid': '2004', 'verified': false, 'competence': 'Critical thinking' },
+        { 'gid': '2004', 'verified': false, 'competence': 'Scientific study methods' },
+        { 'gid': '2005', 'verified': false, 'competence': 'Customer service' },
+        { 'gid': '2005', 'verified': false, 'competence': 'Presentation techniques' },
+        { 'gid': '2005', 'verified': false, 'competence': 'Customer empathy' },
+        { 'gid': '2006', 'verified': false, 'competence': 'Scientific study methods' },
+        { 'gid': '2006', 'verified': false, 'competence': 'Critical thinking' },
+        { 'gid': '2007', 'verified': false, 'competence': 'Presentation techniques' },
+        { 'gid': '2007', 'verified': false, 'competence': 'Teaching' },
+        { 'gid': '2007', 'verified': false, 'competence': 'Customer empathy' },
+        { 'gid': '2008', 'verified': false, 'competence': 'Teaching' },
+        { 'gid': '2008', 'verified': false, 'competence': 'Scientific study methods' }
+      ]
+    },
+    {
+      'name': 'Master of Science',
+      'location': 'University of Helsinki',
+      'verified': true,
+      'competences': [
+        { 'gid': '2001', 'verified': true, 'competence': 'd2 Customer service verified' },
+        { 'gid': '2001', 'verified': true, 'competence': 'd2 Customer empathy verified' },
+        { 'gid': '2001', 'verified': true, 'competence': 'd2 Presentation techniques verified' },
+        { 'gid': '2002', 'verified': true, 'competence': 'Critical thinking' },
+        { 'gid': '2002', 'verified': true, 'competence': 'Scientific study methods' },
+        { 'gid': '2003', 'verified': true, 'competence': 'Teaching' },
+        { 'gid': '2003', 'verified': true, 'competence': 'Customer service' },
+        { 'gid': '2003', 'verified': true, 'competence': 'Presentation techniques' },
+        { 'gid': '2004', 'verified': true, 'competence': 'Critical thinking' },
+        { 'gid': '2004', 'verified': true, 'competence': 'Scientific study methods' },
+        { 'gid': '2005', 'verified': true, 'competence': 'Customer service' },
+        { 'gid': '2005', 'verified': true, 'competence': 'Presentation techniques' },
+        { 'gid': '2005', 'verified': true, 'competence': 'Customer empathy' },
+        { 'gid': '2006', 'verified': true, 'competence': 'Scientific study methods' },
+        { 'gid': '2006', 'verified': true, 'competence': 'Critical thinking' },
+        { 'gid': '2007', 'verified': true, 'competence': 'Presentation techniques' },
+        { 'gid': '2007', 'verified': true, 'competence': 'Teaching' },
+        { 'gid': '2007', 'verified': true, 'competence': 'Customer empathy' },
+        { 'gid': '2008', 'verified': true, 'competence': 'Teaching' },
+        { 'gid': '2008', 'verified': true, 'competence': 'Scientific study methods' },
+
+        { 'gid': '2001', 'verified': false, 'competence': 'd2 Teaching' },
+        { 'gid': '2001', 'verified': false, 'competence': 'd2 Customer empathy' },
+        { 'gid': '2001', 'verified': false, 'competence': 'd2 Presentation techniques' },
+        { 'gid': '2002', 'verified': false, 'competence': 'Critical thinking' },
+        { 'gid': '2002', 'verified': false, 'competence': 'Scientific study methods' },
+        { 'gid': '2003', 'verified': false, 'competence': 'Teaching' },
+        { 'gid': '2003', 'verified': false, 'competence': 'Customer service' },
+        { 'gid': '2003', 'verified': false, 'competence': 'Presentation techniques' },
+        { 'gid': '2004', 'verified': false, 'competence': 'Critical thinking' },
+        { 'gid': '2004', 'verified': false, 'competence': 'Scientific study methods' },
+        { 'gid': '2005', 'verified': false, 'competence': 'Customer service' },
+        { 'gid': '2005', 'verified': false, 'competence': 'Presentation techniques' },
+        { 'gid': '2005', 'verified': false, 'competence': 'Customer empathy' },
+        { 'gid': '2006', 'verified': false, 'competence': 'Scientific study methods' },
+        { 'gid': '2006', 'verified': false, 'competence': 'Critical thinking' },
+        { 'gid': '2007', 'verified': false, 'competence': 'Presentation techniques' },
+        { 'gid': '2007', 'verified': false, 'competence': 'Teaching' },
+        { 'gid': '2007', 'verified': false, 'competence': 'Customer empathy' },
+        { 'gid': '2008', 'verified': false, 'competence': 'Teaching' },
+        { 'gid': '2008', 'verified': false, 'competence': 'Scientific study methods' }
+      ]
+    }
+  ],
+  'jobs': [
+    {
+      'name': 'Marketing Assistant',
+      'location': 'Londerzeel Ice Cream Factory ltd.',
+      'from': '2015/2',
+      'to': '2016/1'
+    },
+    {
+      'name': 'Sandwich Artist',
+      'location': 'Subway Oy Ab',
+      'from': '2017/2',
+      'to': '2018/1'
+    },
+    {
+      'name': 'Research Assistant',
+      'location': 'Tampere Technical University',
+      'from': '2018/2',
+      'to': '2019/1'
+    }
+  ]
+}

@@ -15,11 +15,12 @@ let store = new Vuex.Store({
     competenceGroups: competenceGroups.competenceGroups,
     educationPath: {},
     pathGoalSuggestions: [],
-    pathElements: defaultElements
+    pathElements: defaultElements,
+    pathGoalId: ''
   },
   getters: {
     pathGoalId: state => {
-      return state.personalData.basicInfo.pathGoalId
+      return state.pathGoalId
     }
   },
   mutations: {
@@ -40,7 +41,7 @@ let store = new Vuex.Store({
       state.pathElements = data
     },
     setPathGoal (state, data) {
-      state.personalData.basicInfo.pathGoalId = data
+      state.pathGoalId = data
     }
   },
   actions: {

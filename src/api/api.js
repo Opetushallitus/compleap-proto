@@ -8,7 +8,7 @@ const fetchJson = (mockApiData) => {
     setTimeout(() => {
       resolve(mockApiData)
       // Randomize an API response delay
-    }, (Math.random() * (1300 - 100) + 100))
+    }, (Math.random() * (1000 - 100) + 100))
   })
 }
 
