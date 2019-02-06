@@ -16,7 +16,9 @@ let store = new Vuex.Store({
     educationPath: {},
     pathGoalSuggestions: [],
     pathElements: defaultElements,
-    pathGoalId: ''
+    pathGoalId: '',
+    likedEducations: [],
+    educations: []
   },
   getters: {
     pathGoalId: state => {

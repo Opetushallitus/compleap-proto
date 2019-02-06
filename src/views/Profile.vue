@@ -11,33 +11,35 @@
       <profile-basic-info />
       <competence-profile />
       <educationPath />
-      <div class="d-flex flex-wrap flex-column boxes border-top pt-3">
-        <div class="w-50 education pr-3 pb-5 pt-3">
+      <div class="d-flex flex-wrap flex-row boxes border-top pt-3">
+        <div class="col-6 education">
           <box header="Education">
             <education />
           </box>
         </div>
-        <div class="w-50 pr-3 pb-5">
+        <div class="col-6">
           <box header="Open badges">
             <OpenBadges />
           </box>
         </div>
-        <div class="w-50 pr-3 pb-5">
+        <!--
+        <div class="w-50">
           <box header="Key competences">
             <KeyCompetences />
           </box>
         </div>
-        <div class="w-50 pl-3 pt-3">
+        -->
+        <div class="col-6">
           <box header="Experience">
             <experience />
           </box>
         </div>
-        <div class="w-50 pl-3 pt-5">
+        <div class="col-6">
           <box header="" class="europass">
             <EuroPass />
           </box>
         </div>
-        <div class="w-50 pl-3 pt-5">
+        <div class="col-6">
           <box header="Fields of interest">
             Master of arts
           </box>
@@ -57,7 +59,7 @@ import box from '@/components/box.vue'
 import Education from '@/components/Education.vue'
 import Experience from '@/components/Experience.vue'
 import OpenBadges from '@/components/OpenBadges.vue'
-import KeyCompetences from '@/components/KeyCompetences.vue'
+// import KeyCompetences from '@/components/KeyCompetences.vue'
 import EuroPass from '@/components/EuroPass.vue'
 
 export default {
@@ -71,7 +73,7 @@ export default {
     'Education': Education,
     'Experience': Experience,
     'OpenBadges': OpenBadges,
-    'KeyCompetences': KeyCompetences,
+    // 'KeyCompetences': KeyCompetences,
     'EuroPass': EuroPass
   },
   props: {},
@@ -99,14 +101,17 @@ export default {
     left: 0;
     background-color: black;
 }
+.boxes > div {
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 1em;
+  padding-top: 0em;
+}
 .box {
   border: 1px solid lightgray;
   &.europass {
     border-style: dashed;
     border-radius: 3em;
   }
-}
-.boxes {
-  height: 70em;
 }
 </style>
