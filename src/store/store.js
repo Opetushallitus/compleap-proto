@@ -18,7 +18,9 @@ let store = new Vuex.Store({
     pathElements: defaultElements,
     pathGoalId: '',
     likedEducations: [],
-    educations: []
+    educationsSuggestions_competences: [],
+    educationsSuggestions_education: [],
+    educationsSuggestions_work: []
   },
   getters: {
     pathGoalId: state => {
@@ -44,6 +46,15 @@ let store = new Vuex.Store({
     },
     setPathGoal (state, data) {
       state.pathGoalId = data
+    },
+    setEducationsSuggestions_competences (state, data) {
+      state.educationsSuggestions_competences = data
+    },
+    setEducationsSuggestions_education (state, data) {
+      state.educationsSuggestions_education = data
+    },
+    setEducationsSuggestions_work (state, data) {
+      state.educationsSuggestions_work = data
     }
   },
   actions: {
@@ -66,6 +77,15 @@ let store = new Vuex.Store({
     savePathGoal ({ commit }, id) {
       console.log('savePathGoal', id)
       return commit('setPathGoal', id)
+    },
+    getEducationsSuggestions_competences ({ commit }, userid) {
+      return api.getEducationsSuggestionsCompetences(userid).then(data => commit('setEducationsSuggestions_competences', data.suggestions))
+    },
+    getEducationsSuggestions_education ({ commit }, userid) {
+      return api.getEducationsSuggestionsEducation(userid).then(data => commit('setEducationsSuggestions_education', data.suggestions))
+    },
+    getEducationsSuggestions_work ({ commit }, userid) {
+      return api.getEducationsSuggestionsWork(userid).then(data => commit('setEducationsSuggestions_work', data.suggestions))
     }
   }
 })

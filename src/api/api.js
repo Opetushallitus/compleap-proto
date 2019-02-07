@@ -2,6 +2,9 @@ import personalData from './json/personal-data'
 import users from './json/users'
 import suggestions from './json/path-goal-suggestions'
 import elements from './json/path-elements'
+import educationsSuggestBasedOnCompetences from './json/educations-suggestions-basedon-compentences'
+import educationsSuggestBasedOnEducation from './json/educations-suggestions-basedon-education'
+import educationsSuggestBasedOnWork from './json/educations-suggestions-basedon-work'
 
 const fetchJson = (mockApiData) => {
   return new Promise((resolve) => {
@@ -24,5 +27,15 @@ export default {
   },
   getPathElements (userid, pathGoalId) {
     return fetchJson(elements[userid][pathGoalId])
+  },
+  getEducationsSuggestionsCompetences (userid) {
+    return fetchJson(educationsSuggestBasedOnCompetences[userid])
+  },
+  getEducationsSuggestionsEducation (userid) {
+    console.log(userid)
+    return fetchJson(educationsSuggestBasedOnEducation[userid])
+  },
+  getEducationsSuggestionsWork (userid) {
+    return fetchJson(educationsSuggestBasedOnWork[userid])
   }
 }

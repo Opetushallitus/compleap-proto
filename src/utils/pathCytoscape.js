@@ -2,6 +2,7 @@ import cytoscape from 'cytoscape'
 
 const getCytoscape = (container, elements) => {
   {
+    // eslint-disable-next-line
     let cy = cytoscape(
       {
         container: container,
@@ -41,13 +42,14 @@ const getCytoscape = (container, elements) => {
           rows: 1
         }
       })
-    }
-    return cy
   }
+  // eslint-disable-next-line
+  return cy
+}
 
-  export default {
-    initCytoscape(container, elements) {
-      // onsole.log(container)
-      return getCytoscape(container, elements)
-    }
+export default {
+  initCytoscape (container, elements) {
+    // onsole.log(container)
+    return getCytoscape(container, elements)
   }
+}
