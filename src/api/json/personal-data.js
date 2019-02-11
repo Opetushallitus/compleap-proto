@@ -12,11 +12,10 @@ personalData[1001] = {
     'Completed studies',
     'Previous study applications'
   ],
-  'keyCompetences': [
-    {
-      'name': 'Chemistry',
-      'level': '5'
-    }
+  'interests': [
+    { 'gid': '2002', 'name': 'Chemistry' },
+    { 'gid': '2008', 'name': 'Travelling' },
+    { 'gid': '2001', 'name': 'Loves to bake cakes' }
   ],
   'openBadges': [
     {
@@ -33,9 +32,10 @@ personalData[1001] = {
       'from': '2015/2',
       'to': '2018/8',
       'competences': [
-        { 'gid': '2002', 'verified': true, 'competence': 'Chemistry' },
-        { 'gid': '2003', 'verified': false, 'competence': 'Chemistry' },
-        { 'gid': '2008', 'verified': false, 'competence': 'Travelling' }
+        { 'gid': '2002', 'verified': true, 'competence': 'Chemistry at school' },
+        { 'gid': '2003', 'verified': true, 'competence': 'Sales skills' },
+        { 'gid': '2008', 'verified': true, 'competence': 'English' },
+        { 'gid': '2008', 'verified': false, 'competence': 'Swedish' }
       ]
     }
   ],
@@ -62,11 +62,10 @@ personalData[1002] = {
     'Worklife services',
     'Previous study applications'
   ],
-  'keyCompetences': [
-    {
-      'name': 'Drawing',
-      'level': '4'
-    }
+  'interests': [
+    { 'gid': '2008', 'name': 'Drawing' },
+    { 'gid': '2008', 'name': 'Design' },
+    { 'gid': '2001', 'name': 'Tinkering and similar hobby crafts' }
   ],
   'openBadges': [
     {
@@ -88,11 +87,8 @@ personalData[1002] = {
         { 'gid': '2005', 'verified': true, 'competence': 'Customer service' },
         { 'gid': '2001', 'verified': true, 'competence': 'Marketing' },
         { 'gid': '2003', 'verified': true, 'competence': 'Coding' },
-        { 'gid': '2008', 'verified': true, 'competence': 'Drawing' },
-        { 'gid': '2002', 'verified': false, 'competence': 'Tinkering' },
-        { 'gid': '2002', 'verified': false, 'competence': 'Hobby crafts' },
-        { 'gid': '2008', 'verified': false, 'competence': 'Design' },
-        { 'gid': '2008', 'verified': false, 'competence': 'Drawing' }
+        { 'gid': '2008', 'verified': true, 'competence': 'Drawing skills' },
+        { 'gid': '2002', 'verified': false, 'competence': 'Social media' }
       ]
     }
   ],
@@ -117,11 +113,10 @@ personalData[1003] = {
   'additionalInfo': [
     'Previous study applications'
   ],
-  'keyCompetences': [
-    {
-      'name': 'Drawing',
-      'level': '4'
-    }
+  'interests': [
+    { 'gid': '2008', 'name': 'Having fun with friends' },
+    { 'gid': '2008', 'name': 'Social media – youtube channel / football postcasts' },
+    { 'gid': '2001', 'name': 'Football' }
   ],
   'openBadges': [
     {
@@ -138,14 +133,11 @@ personalData[1003] = {
       'from': '2015/2',
       'to': '2018/8',
       'competences': [
-        { 'gid': '2008', 'verified': false, 'competence': 'Having fun with friends' },
-        { 'gid': '2008', 'verified': false, 'competence': 'Social media' },
-        { 'gid': '2008', 'verified': false, 'competence': 'Football' },
-        { 'gid': '2001', 'verified': false, 'competence': 'Customer orientation' },
-        { 'gid': '2001', 'verified': false, 'competence': 'Maintenance cleaning services' },
-        { 'gid': '2005', 'verified': false, 'competence': 'Customer sites' },
-        { 'gid': '2005', 'verified': false, 'competence': 'Customer service' },
-        { 'gid': '2007', 'verified': true, 'competence': 'English language' }
+        { 'gid': '2008', 'verified': true, 'competence': 'Customer-orientation' },
+        { 'gid': '2008', 'verified': true, 'competence': 'Maintenance cleaning services' },
+        { 'gid': '2005', 'verified': true, 'competence': 'Customer sites' },
+        { 'gid': '2005', 'verified': true, 'competence': 'Customer service' },
+        { 'gid': '2007', 'verified': false, 'competence': 'English language' }
       ]
     }
   ],
@@ -174,7 +166,7 @@ personalData[1004] = {
     'blurp': '(N/A)'
   },
   'additionalInfo': [],
-  'keyCompetences': [],
+  'interests': [],
   'openBadges': [],
   'degrees': [{
     'name': '(N/A)',
@@ -183,7 +175,7 @@ personalData[1004] = {
     'from': '2015/2',
     'to': '2018/8',
     'competences': [
-      { 'gid': '2001', 'verified': false, 'competence': '' }
+      { 'gid': '2001', 'verified': true, 'competence': '(N/A)' }
     ]
   }],
   'jobs': [

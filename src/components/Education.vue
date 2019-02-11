@@ -67,7 +67,7 @@
             <div class="competences p-3 d-flex flex-column align-items-center">
               <h5>Verify competences!</h5>
               <ul class="p-0 m-0 pl-2">
-                <li v-for="(competence, index) in degreeDataCopy.competences" :key="`${index}-comp`" :class="{'competence': competence.verified, 'interest': !competence.verified}" v-on:click="verifyToggle(index, competence.verified)">
+                <li v-for="(competence, index) in degreeDataCopy.competences" :key="`${index}-comp`" :class="{'competenceVerified': competence.verified, 'competenceUnverified': !competence.verified}" v-on:click="verifyToggle(index, competence.verified)">
                   <span>{{competence.competence}}</span>
                 </li>
               </ul>
@@ -202,8 +202,8 @@ ul {
   div {
     line-height: 1em;
   }
-  li.interest,
-  li.competence {
+  li.competenceUnverified,
+  li.competenceVerified {
     padding: .1em 0em;
     display: inline-block;
     margin-right: .5em;
@@ -214,18 +214,17 @@ ul {
       border-radius: 1em;
     }
   }
-  li.interest:hover,
-  li.competence:hover{
+  li.competenceUnverified:hover,
+  li.competenceVerified:hover{
     cursor: pointer;
     span {
       box-shadow: 0px 2px 10px -1px rgba(0,0,0,0.78);
     }
   }
-  li.interest {
+  li.competenceUnverified {
     span {
-      background-color: $white;
-      border: 1px solid gray;
-      border-style: dashed;
+      background-color: $gray-200;
+      border: 1px solid $gray-200;
     }
   }
 }

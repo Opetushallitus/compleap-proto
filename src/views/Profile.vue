@@ -41,7 +41,7 @@
         </div>
         <div class="col-6">
           <box header="Fields of interest">
-            Master of arts
+            <Interests />
           </box>
         </div>
       </div>
@@ -59,7 +59,7 @@ import box from '@/components/box.vue'
 import Education from '@/components/Education.vue'
 import Experience from '@/components/Experience.vue'
 import OpenBadges from '@/components/OpenBadges.vue'
-// import KeyCompetences from '@/components/KeyCompetences.vue'
+import Interests from '@/components/Interests.vue'
 import EuroPass from '@/components/EuroPass.vue'
 
 export default {
@@ -73,7 +73,7 @@ export default {
     'Education': Education,
     'Experience': Experience,
     'OpenBadges': OpenBadges,
-    // 'KeyCompetences': KeyCompetences,
+    'Interests': Interests,
     'EuroPass': EuroPass
   },
   props: {},

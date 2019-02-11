@@ -5,21 +5,21 @@
         <h3>Compentence profile</h3>
       </div>
       <div class="section-content d-flex border-bottom pb-5">
-        <CompetenceProfileSection :competences="getCompetences(competenceGroups[0].id, true)" :interests="getCompetences(competenceGroups[0].id, false)" :id="competenceGroups[0].id" :name="competenceGroups[0].name" :showVerified="showVerified"></CompetenceProfileSection>
-        <CompetenceProfileSection :competences="getCompetences(competenceGroups[1].id, true)" :interests="getCompetences(competenceGroups[1].id, false)" :id="competenceGroups[1].id" :name="competenceGroups[1].name" :showVerified="showVerified"></CompetenceProfileSection>
-        <CompetenceProfileSection :competences="getCompetences(competenceGroups[2].id, true)" :interests="getCompetences(competenceGroups[2].id, false)" :id="competenceGroups[2].id" :name="competenceGroups[2].name" :showVerified="showVerified"></CompetenceProfileSection>
-        <CompetenceProfileSection :competences="getCompetences(competenceGroups[3].id, true)" :interests="getCompetences(competenceGroups[3].id, false)" :id="competenceGroups[3].id" :name="competenceGroups[3].name" :showVerified="showVerified"></CompetenceProfileSection>
+        <CompetenceProfileSection :competences="getCompetences(competenceGroups[0].id)" :interests="getInterests(competenceGroups[0].id)" :id="competenceGroups[0].id" :name="competenceGroups[0].name" :showCompetences="showCompetences"></CompetenceProfileSection>
+        <CompetenceProfileSection :competences="getCompetences(competenceGroups[1].id)" :interests="getInterests(competenceGroups[1].id)" :id="competenceGroups[1].id" :name="competenceGroups[1].name" :showCompetences="showCompetences"></CompetenceProfileSection>
+        <CompetenceProfileSection :competences="getCompetences(competenceGroups[2].id)" :interests="getInterests(competenceGroups[2].id)" :id="competenceGroups[2].id" :name="competenceGroups[2].name" :showCompetences="showCompetences"></CompetenceProfileSection>
+        <CompetenceProfileSection :competences="getCompetences(competenceGroups[3].id)" :interests="getInterests(competenceGroups[3].id)" :id="competenceGroups[3].id" :name="competenceGroups[3].name" :showCompetences="showCompetences"></CompetenceProfileSection>
       </div>
       <div class="section-content m-3 d-flex justify-content-center">
-        <button type="button" class="btn btn-light align-self-center" :class="{'btn-dark': showVerified}" v-on:click="showVerified = true">My competences</button>
+        <button type="button" class="btn btn-light align-self-center" :class="{'btn-dark': showCompetences}" v-on:click="showCompetences = true">My competences</button>
         <img :src="'../profile-images/' + personalData.basicInfo.id + '.png'" class="mx-4 align-self-center" width="48" />
-        <button type="button" class="btn btn-light align-self-center" :class="{'btn-dark': !showVerified}" v-on:click="showVerified = false">My interests</button>
+        <button type="button" class="btn btn-light align-self-center" :class="{'btn-dark': !showCompetences}" v-on:click="showCompetences = false">My interests</button>
       </div>
       <div class="section-content d-flex border-top pt-5">
-        <CompetenceProfileSection :competences="getCompetences(competenceGroups[4].id, true)" :interests="getCompetences(competenceGroups[4].id, false)" :id="competenceGroups[4].id" :name="competenceGroups[4].name" :showVerified="showVerified"></CompetenceProfileSection>
-        <CompetenceProfileSection :competences="getCompetences(competenceGroups[5].id, true)" :interests="getCompetences(competenceGroups[5].id, false)" :id="competenceGroups[5].id" :name="competenceGroups[5].name" :showVerified="showVerified"></CompetenceProfileSection>
-        <CompetenceProfileSection :competences="getCompetences(competenceGroups[6].id, true)" :interests="getCompetences(competenceGroups[6].id, false)" :id="competenceGroups[6].id" :name="competenceGroups[6].name" :showVerified="showVerified"></CompetenceProfileSection>
-        <CompetenceProfileSection :competences="getCompetences(competenceGroups[7].id, true)" :interests="getCompetences(competenceGroups[7].id, false)" :id="competenceGroups[7].id" :name="competenceGroups[7].name" :showVerified="showVerified"></CompetenceProfileSection>
+        <CompetenceProfileSection :competences="getCompetences(competenceGroups[4].id)" :interests="getInterests(competenceGroups[4].id)" :id="competenceGroups[4].id" :name="competenceGroups[4].name" :showCompetences="showCompetences"></CompetenceProfileSection>
+        <CompetenceProfileSection :competences="getCompetences(competenceGroups[5].id)" :interests="getInterests(competenceGroups[5].id)" :id="competenceGroups[5].id" :name="competenceGroups[5].name" :showCompetences="showCompetences"></CompetenceProfileSection>
+        <CompetenceProfileSection :competences="getCompetences(competenceGroups[6].id)" :interests="getInterests(competenceGroups[6].id)" :id="competenceGroups[6].id" :name="competenceGroups[6].name" :showCompetences="showCompetences"></CompetenceProfileSection>
+        <CompetenceProfileSection :competences="getCompetences(competenceGroups[7].id)" :interests="getInterests(competenceGroups[7].id)" :id="competenceGroups[7].id" :name="competenceGroups[7].name" :showCompetences="showCompetences"></CompetenceProfileSection>
       </div>
     </div>
   </div>
@@ -37,23 +37,30 @@ export default {
   },
   methods: {
     ...mapActions(['getPersonalData']),
-    getCompetences (id, verified) {
+    getCompetences (id) {
       // Find all degrees that have competences
       let x = _.filter(this.personalData.degrees, (degree) => { return degree.competences })
       let competences = []
       _.forEach(x, (degree) => {
         // Find all competences with the provided group id
-        _.forEach((_.filter(degree.competences, { 'gid': id, 'verified': verified })), (competence) => {
+        _.forEach((_.filter(degree.competences, { 'gid': id })), (competence) => {
           competences.push(competence.competence)
         })
       })
       // Return a flat unique array of competences
       return _.uniq(_.flatten(competences))
+    },
+    getInterests (id) {
+      let interest = _.filter(this.personalData.interests, { 'gid': id })
+      if (interest.length > 0) {
+        return _.map(interest, 'name')
+      }
+      return []
     }
   },
   data () {
     return {
-      showVerified: true // toggle between My competences and My interests. Verified / Not verified
+      showCompetences: true // toggle between My competences and My interests.
     }
   },
   computed: {
