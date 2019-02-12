@@ -32,13 +32,22 @@ educationsSuggestBasedOnEducation[1001] = {
 educationsSuggestBasedOnEducation[1002] = {
   'suggestions': [
     {
-      'name': 'Vocational Education in Media and Visual Expression'
+      'name': 'Vocational Education in Media and Visual Expression',
+      'percentage': '23',
+      'location': 'Helsinki, Finland',
+      'timeLeft': 'One month remaining'
     },
     {
-      'name': 'Bachelor´s Degree Programme in Media and Arts'
+      'name': 'Bachelor´s Degree Programme in Media and Arts',
+      'percentage': '89',
+      'location': 'Helsinki, Finland',
+      'timeLeft': 'Six months remaining'
     },
     {
-      'name': 'Master´s Degree Programme in Emerging Media'
+      'name': 'Master´s Degree Programme in Emerging Media',
+      'percentage': '76',
+      'location': 'Helsinki, Finland',
+      'timeLeft': 'Four months remaining'
     }
   ]
 }
@@ -46,10 +55,33 @@ educationsSuggestBasedOnEducation[1002] = {
 educationsSuggestBasedOnEducation[1003] = {
   'suggestions': [
     {
-      'name': 'Vocational Qualification in Cleaning and Property Services'
+      'name': 'Vocational Qualification in Cleaning and Property Services',
+      'percentage': '23',
+      'location': 'Helsinki, Finland',
+      'timeLeft': 'One month remaining'
     },
     {
-      'name': 'Preparatory education for vocational training'
+      'name': 'Preparatory education for vocational training',
+      'percentage': '89',
+      'location': 'Helsinki, Finland',
+      'timeLeft': 'Six months remaining'
+    },
+    {
+      'name': 'National Certificates of Language Proficiency(YKI) – Finnish',
+      'percentage': '76',
+      'location': 'Helsinki, Finland',
+      'timeLeft': 'Four months remaining'
+    }
+  ]
+}
+
+educationsSuggestBasedOnEducation[1004] = {
+  'suggestions': [
+    {
+      'name': '',
+      'percentage': '',
+      'location': '',
+      'timeLeft': ''
     }
   ]
 }

@@ -10,7 +10,7 @@
         <small>{{personalData.basicInfo.city}}</small>
       </div>
       <div class="pl-7 w-50">
-        <ul class="mt-2 mb-2 p-0">
+        <ul class="mt-2 mb-2 p-0" v-if="personalData.degrees.length > 0">
           <li class="d-flex align-items-start">
             <img src="../assets/images/degree.svg" class="pr-3 pt-1" />
             <div class="pb-3">
@@ -19,10 +19,10 @@
             </div>
           </li>
         </ul>
-        <ul class="mt-2 mb-2 p-0">
+        <ul class="mt-2 mb-2 p-0" v-if="personalData.jobs.length > 0">
           <li class="d-flex align-items-start">
             <img src="../assets/images/job.svg" class="pr-3 pt-1" />
-            <div class="pb-3">
+            <div class="pb-3" >
               <strong>{{personalData.jobs[0].name}}</strong><br />
               <small>{{personalData.jobs[0].location}}</small>
             </div>

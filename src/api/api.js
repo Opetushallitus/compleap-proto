@@ -32,7 +32,6 @@ export default {
     return fetchJson(educationsSuggestBasedOnCompetences[userid])
   },
   getEducationsSuggestionsEducation (userid) {
-    console.log(userid)
     return fetchJson(educationsSuggestBasedOnEducation[userid])
   },
   getEducationsSuggestionsWork (userid) {

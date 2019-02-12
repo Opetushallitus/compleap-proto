@@ -44,7 +44,7 @@ export default {
       this.setPersonalData(this.personalData)
     },
     addInterest () {
-      this.personalData.interests.push({'name': this.interestName, 'gid': this.interestGroup})
+      this.personalData.interests.push({ 'name': this.interestName, 'gid': this.interestGroup })
       this.interestName = ''
       this.interestGroup = ''
       this.showAddInterest = false

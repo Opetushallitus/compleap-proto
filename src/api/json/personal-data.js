@@ -6,7 +6,7 @@ personalData[1001] = {
     'age': '16',
     'city': 'Kotka, Finland',
     'id': '1001',
-    'blurp': 'Trying to find an inspiring new educational path'
+    'blurp': 'Decide what to study next. Trying to find an inspiring new educational path'
   },
   'additionalInfo': [
     'Completed studies',
@@ -39,14 +39,7 @@ personalData[1001] = {
       ]
     }
   ],
-  'jobs': [
-    {
-      'name': 'Sandwich Artist',
-      'location': 'Subway Oy Ab',
-      'from': '2017/2',
-      'to': '2018/1'
-    }
-  ]
+  'jobs': []
 }
 
 personalData[1002] = {
