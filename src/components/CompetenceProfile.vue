@@ -42,8 +42,8 @@ export default {
       let x = _.filter(this.personalData.degrees, (degree) => { return degree.competences })
       let competences = []
       _.forEach(x, (degree) => {
-        // Find all competences with the provided group id
-        _.forEach((_.filter(degree.competences, { 'gid': id })), (competence) => {
+        // Find all competences with the provided group id that are also verified
+        _.forEach((_.filter(degree.competences, { 'gid': id, 'verified': true })), (competence) => {
           competences.push(competence.competence)
         })
       })
