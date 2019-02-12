@@ -5,6 +5,7 @@ import elements from './json/path-elements'
 import educationsSuggestBasedOnCompetences from './json/educations-suggestions-basedon-compentences'
 import educationsSuggestBasedOnEducation from './json/educations-suggestions-basedon-education'
 import educationsSuggestBasedOnWork from './json/educations-suggestions-basedon-work'
+import jobSuggestions from './json/job-suggestions'
 
 const fetchJson = (mockApiData) => {
   return new Promise((resolve) => {
@@ -36,5 +37,8 @@ export default {
   },
   getEducationsSuggestionsWork (userid) {
     return fetchJson(educationsSuggestBasedOnWork[userid])
+  },
+  getJobSuggestions (userid) {
+    return fetchJson(jobSuggestions[userid])
   }
 }

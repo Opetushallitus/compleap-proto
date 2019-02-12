@@ -18,9 +18,11 @@ let store = new Vuex.Store({
     pathElements: defaultElements,
     pathGoalId: '',
     likedEducations: [],
+    likedJobs: [],
     educationsSuggestions_competences: [],
     educationsSuggestions_education: [],
-    educationsSuggestions_work: []
+    educationsSuggestions_work: [],
+    jobSuggestions: []
   },
   getters: {
     pathGoalId: state => {
@@ -55,6 +57,9 @@ let store = new Vuex.Store({
     },
     setEducationsSuggestions_work (state, data) {
       state.educationsSuggestions_work = data
+    },
+    setJobSuggestions (state, data) {
+      state.jobSuggestions = data
     }
   },
   actions: {
@@ -86,6 +91,9 @@ let store = new Vuex.Store({
     },
     getEducationsSuggestions_work ({ commit }, userid) {
       return api.getEducationsSuggestionsWork(userid).then(data => commit('setEducationsSuggestions_work', data.suggestions))
+    },
+    getJobSuggestions ({ commit }, userid) {
+      return api.getJobSuggestions(userid).then(data => commit('setJobSuggestions', data.suggestions))
     }
   }
 })

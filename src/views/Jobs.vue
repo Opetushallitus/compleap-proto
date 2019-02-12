@@ -7,8 +7,29 @@
       <img src="../assets/images/logo.png" style="width: 200px;" />
       <navigation />
     </div>
-    <div class="content">
-      <h2>Jobs</h2>
+    <div class="content d-flex pt-7">
+      <div class="col-3">
+        <img :src="'../profile-images/' + personalData.basicInfo.id + '.png'" style="width: 100px;" />
+        <div class="liked-eds" v-if="likedJobs.length > 0">
+          <img src="../assets/images/thumb-small.svg" />
+          &nbsp;{{likedJobs.length}} liked jobs
+        </div>
+      </div>
+      <div class="col-7 text-center">
+        <h3>Your next dream job?</h3>
+        <p>We’ve searched for the job openings that match your unique profile.<br/>
+        If you can’t find a fitting opportunity, you can try to update your profile</p>
+      </div>
+    </div>
+    <div class="search d-flex w-100 mt-6">
+      <div class="d-flex w-100">
+        <input type="text" class="form-control" placeholder="Search jobs" />
+        <button class="btn btn-secondary">SEARCH</button>
+      </div>
+    </div>
+    <div class="d-flex w-100 mt-6 flex-column" v-if="jobSuggestions.length > 0">
+      <h4><span class="star">★</span>Top 3 job matches</h4>
+      <SuggestionCard :suggestions="jobSuggestions" />
     </div>
   </div>
 </template>
@@ -27,7 +48,7 @@ export default {
   },
   data () {
     return {
-      'likedEducations': []
+      'likedJobs': []
     }
   },
   computed: mapState([
