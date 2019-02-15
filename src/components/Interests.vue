@@ -3,7 +3,7 @@
     <button class="btn btn-light btn-sm add" title="Add an interest" v-on:click="showAddInterest=true">+</button>
     <transition name="slide" appear>
       <div class="add-interest form-group p-3" v-if="showAddInterest">
-        <label for="interestName">Name</label>
+        <label for="interestName">Interest</label>
         <input id="interestName" type="text" class="form-control mb-2" v-model="interestName" />
         <label for="interestGroup">Group</label>
         <select class="form-control mb-2" v-model="interestGroup" id="interestGroup">

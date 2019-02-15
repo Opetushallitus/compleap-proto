@@ -2,7 +2,7 @@
   <div>
     <div v-if="personalData.basicInfo" class="competence-profile pt-5 pb-5 d-flex flex-column">
       <div class="section-head w-100 px-4 py-2 mb-6 border-top">
-        <h3>Compentence profile</h3>
+        <h3>Competence profile</h3>
       </div>
       <div class="section-content d-flex border-bottom pb-5">
         <CompetenceProfileSection :competences="getCompetences(competenceGroups[0].id)" :interests="getInterests(competenceGroups[0].id)" :id="competenceGroups[0].id" :name="competenceGroups[0].name" :showCompetences="showCompetences"></CompetenceProfileSection>
